@@ -316,6 +316,19 @@ a:focus {
     -o-background-size: cover;
 }
 
+
+.experimental-section {
+    padding-top: 100px;
+    color: #fff;
+	width: 100%;
+    background-color: rgba(15,89,219,0.2);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+
 .ml-section {
     width: 100%;
     padding: 50px 0;
