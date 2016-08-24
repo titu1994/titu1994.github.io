@@ -155,7 +155,7 @@ a:focus {
     padding: 100px 0;
     text-align: center;
     color: #fff;
-    background: url(../img/blue-moon-lake.jpg) no-repeat top center scroll;
+    background: url(../img/Tsukiyomi_MaxPooling_at_iteration_50.png) no-repeat top center scroll;
     background-color: #000;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -210,6 +210,7 @@ a:focus {
 
 .intro .intro-body .brand-heading {
     font-size: 40px;
+	color:rgba(255,255,255,1.0)
 }
 
 .intro .intro-body .intro-text {
