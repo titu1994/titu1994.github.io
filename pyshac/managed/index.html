@@ -1,0 +1,723 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="Documentation for PySHAC, the Python library for Sequential Halving and Classification.">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-0.17.4, mkdocs-material-2.9.1">
+    
+    
+      
+        <title>Managed Engines - PySHAC Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application.ba0fd1a6.css">
+      
+        <link rel="stylesheet" href="../assets/stylesheets/application-palette.6079476c.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#3f51b5">
+      
+    
+    
+      <script src="../assets/javascripts/modernizr.1aa3b519.js"></script>
+    
+    
+      <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+      
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../assets/fonts/material-icons.css">
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="indigo" data-md-color-accent="light-blue">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
+    viewBox="0 0 416 448" id="__github">
+  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
+        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
+        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
+        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
+        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
+        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
+        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
+        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
+        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
+        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
+        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
+        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
+        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
+        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
+        99.5z" />
+</svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#managed-engines-for-advanced-workflows" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href=".." title="PySHAC Documentation" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            
+              <span class="md-header-nav__topic">
+                PySHAC Documentation
+              </span>
+              <span class="md-header-nav__topic">
+                Managed Engines
+              </span>
+            
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          
+            <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+
+  <a href="https://github.com/titu1994/pyshac/" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#__github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      Github
+    </div>
+  </a>
+
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <span class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </span>
+    PySHAC Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="https://github.com/titu1994/pyshac/" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#__github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      Github
+    </div>
+  </a>
+
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../install/" title="Installation" class="md-nav__link">
+      Installation
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../guide/" title="User Guide" class="md-nav__link">
+      User Guide
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../serial-execution/" title="Serial Evaluation" class="md-nav__link">
+      Serial Evaluation
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Managed Engines
+      </label>
+    
+    <a href="./" title="Managed Engines" class="md-nav__link md-nav__link--active">
+      Managed Engines
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#motivation-for-managed-engines" title="Motivation for Managed Engines" class="md-nav__link">
+    Motivation for Managed Engines
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#torchshac" title="TorchSHAC" class="md-nav__link">
+    TorchSHAC
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tensorflowshac" title="TensorflowSHAC" class="md-nav__link">
+    TensorflowSHAC
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kerasshac" title="KerasSHAC" class="md-nav__link">
+    KerasSHAC
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../custom-hyper-parameters/" title="Custom Hyper Parameters" class="md-nav__link">
+      Custom Hyper Parameters
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      Config
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        Config
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../config/hyperparameters/" title="Hyper Parameters" class="md-nav__link">
+      Hyper Parameters
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../config/data/" title="Datasets" class="md-nav__link">
+      Datasets
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
+    
+    <label class="md-nav__link" for="nav-8">
+      Core
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-8">
+        Core
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../core/engine/" title="SHAC" class="md-nav__link">
+      SHAC
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../core/torch_engine/" title="PyTorch SHAC" class="md-nav__link">
+      PyTorch SHAC
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../core/tf_engine/" title="Tensorflow SHAC" class="md-nav__link">
+      Tensorflow SHAC
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../core/keras_engine/" title="Keras SHAC" class="md-nav__link">
+      Keras SHAC
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#motivation-for-managed-engines" title="Motivation for Managed Engines" class="md-nav__link">
+    Motivation for Managed Engines
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#torchshac" title="TorchSHAC" class="md-nav__link">
+    TorchSHAC
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tensorflowshac" title="TensorflowSHAC" class="md-nav__link">
+    TensorflowSHAC
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kerasshac" title="KerasSHAC" class="md-nav__link">
+    KerasSHAC
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/titu1994/pyshac/edit/master/docs/managed.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                <h1 id="managed-engines-for-advanced-workflows">Managed Engines for Advanced Workflows<a class="headerlink" href="#managed-engines-for-advanced-workflows" title="Permanent link">&para;</a></h1>
+<hr />
+<p>When using just CPU resources, <code>SHAC</code> is sufficient for most tasks.</p>
+<p>However, when more complicated workflows are involved - such as training models and evaluation with
+Tensorflow, PyTorch or Keras or other such libraries that involve graph based execution and memory
+management, it is advised to use the Managed Engines detailed here.</p>
+<p>There are three engines provided :</p>
+<ul>
+<li><a href="../core/torch_engine/#torchshac">TorchSHAC</a></li>
+<li><a href="../core/tf_engine/#tensorflowshac">TensorflowSHAC</a></li>
+<li><a href="../core/keras_engine/#kerasshac">KerasSHAC</a></li>
+</ul>
+<h2 id="motivation-for-managed-engines">Motivation for Managed Engines<a class="headerlink" href="#motivation-for-managed-engines" title="Permanent link">&para;</a></h2>
+<hr />
+<ul>
+<li>Tensorflow / Keras use graphs to generate and train models. These graphs and their scopes need to be managed properly.</li>
+<li>If evaluators are models which run on the GPU, it may not be possible to run more than 1 model at once due to memory constraints.</li>
+<li>It is necessary to provide a simple interface to decide whether GPUs will be used or not.</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>It is upto the user to utilize the <code>worker_id</code> parameter to determine the placement of the operations.</p>
+<p>The session provided <strong>does not</strong> wrap the evaluation function in a device, as certain ops may not be
+available on GPUs.</p>
+<p>In the same manner, when using PyTorch, the device is not set by the managed engine. It is the task of
+the user to utilize the provided <code>worker_id</code> in pushing models onto the correct devices.</p>
+</div>
+<h2 id="torchshac"><a href="../core/torch_engine/#torchshac">TorchSHAC</a><a class="headerlink" href="#torchshac" title="Permanent link">&para;</a></h2>
+<hr />
+<p>This is the most basic managed engine, which only provides a unified interface similar to <code>TensorflowSHAC</code> and
+<code>KerasSHAC</code>. In term's of functionality, it does not manage memory or graph execution, since PyTorch does not
+utilize a graph in a user facing way.</p>
+<p>It simply provides a way to determine whether / how many evaluation processs can be started using the <code>max_gpu_evaluators</code>
+argument.</p>
+<p>As such, when using dynamic execution environments, such as <code>PyTorch</code>, <code>Tensorflow Eager</code> or <code>tf.keras</code> with
+Eager Execution enabled, it is suggested to use this backend.</p>
+<p>Like <code>SHAC</code>, the evaluation function will receive 2 inputs :</p>
+<ul>
+<li><strong>Worker ID</strong>: Integer id that can be left alone when executing only on CPU or used to determine the GPU id on which the model will be evaluated.</li>
+<li><strong>Parameter OrderedDict</strong>: An OrderedDict which contains the (name, value) pairs of the Parameters passed to the engine.<ul>
+<li>These are the values of the sampled hyper parameters which have passed through the current cascade of models.</li>
+</ul>
+</li>
+</ul>
+<h2 id="tensorflowshac"><a href="../core/tf_engine/#tensorflowshac">TensorflowSHAC</a><a class="headerlink" href="#tensorflowshac" title="Permanent link">&para;</a></h2>
+<p>Due to its graph based execution, Tensorflow is the primary candidate to use a managed session.</p>
+<p>Unlike the <code>SHAC</code> and <code>TorchSHAC</code> engines, an evaluation function using the <code>TensorflowSHAC</code> engine will receive
+3 inputs :</p>
+<ul>
+<li><strong>Tensorflow Session</strong>: This session manages a separate graph for each parallel evaluator.<ul>
+<li>The scope of all ops inside the evaluation function is the scope of the managed graph.</li>
+<li>It can be used to run all operations inside of the evaluation function.</li>
+</ul>
+</li>
+<li><strong>Worker Id</strong>: An integer id that can be used alongside multiple GPU's to determine which GPU will be used to</li>
+<li><strong>Parameter OrderedDict</strong>: An OrderedDict which contains the (name, value) pairs of the Parameters passed to the engine.<ul>
+<li>These are the values of the sampled hyper parameters which have passed through the current cascade of models.</li>
+</ul>
+</li>
+</ul>
+<p>Since these graphs are managed by the engine, once the evaluation function has provided a value, the respective graph
+will be destroyed and resources released automatically by the engine.</p>
+<h2 id="kerasshac"><a href="../core/keras_engine/#kerasshac">KerasSHAC</a><a class="headerlink" href="#kerasshac" title="Permanent link">&para;</a></h2>
+<p>Since Keras is a wrapper over Tensorflow and CNTK which support multiple GPU execution, this wrapper simply
+provides a thin wrapper over the <code>TensorflowSHAC</code> engine. It's primary purpose is to release resources
+after the evaluation of the function.</p>
+<p>Unlike the <code>SHAC</code> and <code>TorchSHAC</code> engines, an evaluation function using the <code>KerasSHAC</code> engine will receive
+3 inputs :</p>
+<ul>
+<li><strong>Tensorflow Session or None</strong>: This session manages a separate graph for each parallel evaluator.<ul>
+<li>The scope of all ops inside the evaluation function is the scope of the managed graph.</li>
+<li>It can be used to run all operations inside of the evaluation function.</li>
+<li>When using the CNTK backend, this argument will be <code>None</code>.</li>
+</ul>
+</li>
+<li><strong>Worker Id</strong>: An integer id that can be used alongside multiple GPU's to determine which GPU will be used to</li>
+<li><strong>Parameter OrderedDict</strong>: An OrderedDict which contains the (name, value) pairs of the Parameters passed to the engine.<ul>
+<li>These are the values of the sampled hyper parameters which have passed through the current cascade of models.</li>
+</ul>
+</li>
+</ul>
+<p>Since these graphs are managed by the engine, once the evaluation function has provided a value, the respective graph
+will be destroyed and resources released automatically by the engine.</p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../serial-execution/" title="Serial Evaluation" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Serial Evaluation
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../custom-hyper-parameters/" title="Custom Hyper Parameters" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Custom Hyper Parameters
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+        
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application.a59e2a89.js"></script>
+      
+      <script>app.initialize({version:"0.17.4",url:{base:".."}})</script>
+      
+    
+    
+      
+        <script>!function(e,a,t,n,o,c,i){e.GoogleAnalyticsObject=o,e.ga=e.ga||function(){(e.ga.q=e.ga.q||[]).push(arguments)},e.ga.l=1*new Date,c=a.createElement(t),i=a.getElementsByTagName(t)[0],c.async=1,c.src="https://www.google-analytics.com/analytics.js",i.parentNode.insertBefore(c,i)}(window,document,"script",0,"ga"),ga("create","UA-47921241-1","auto"),ga("set","anonymizeIp",!0),ga("send","pageview");var links=document.getElementsByTagName("a");if(Array.prototype.map.call(links,function(e){e.host!=document.location.host&&e.addEventListener("click",function(){var a=e.getAttribute("data-md-action")||"follow";ga("send","event","outbound",a,e.href)})}),document.forms.search){var query=document.forms.search.query;query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})}</script>
+      
+    
+  </body>
+</html>
