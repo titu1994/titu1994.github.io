@@ -710,9 +710,10 @@
 <h2 id="important-note-for-windows-platform">Important Note for Windows Platform<a class="headerlink" href="#important-note-for-windows-platform" title="Permanent link">&para;</a></h2>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>The <code>fit</code> and <code>predict</code> methods <strong>must be called only from inside of a <code>if __name__ == '__main__'</code> block.</strong></p>
+<p>The <code>fit</code> and <code>predict</code> methods <strong>must be called only from inside of a <code>if __name__ == '__main__'</code> block.</strong> when using the <strong>multiprocessing</strong> backend.
+This is no longer an issue when using the <code>loky</code> backend (default).</p>
 <p>This is a limitation of how Windows does not support forking, and so the engine definition and its methods must be called
-inside of a <code>__main__</code> block.</p>
+inside of a <code>__main__</code> block when using the <code>multiprocessing</code> backend.</p>
 <p>It is simpler to put this code inside of a function, and simply call this function from the <code>__main__</code> block
 to have better readability of code.</p>
 </div>
@@ -755,7 +756,6 @@ More information can be found in <a href="../managed/">Managed Engines</a>.</p>
 <h3 id="setting-up-the-engine">Setting up the engine<a class="headerlink" href="#setting-up-the-engine" title="Permanent link">&para;</a></h3>
 <p>When setting up the SHAC engine, we need to define a few important parameters which will be used by the engine :</p>
 <ul>
-<li><strong>Evaluation Function</strong>: This is a user defined function, that accepts 2 or more inputs as defined by the engine, and returns a python floating point value.</li>
 <li><strong>Hyper Parameter list</strong>: A list of parameters that have been declared. This will constitute the search space.</li>
 <li><strong>Total budget</strong>: The number of evaluations that will occur.</li>
 <li><strong>Number of batches</strong>: The number of batches per epoch of evaluation.</li>
@@ -780,17 +780,6 @@ This eases the training of models as well, since we can be sure of how many samp
 <div class="codehilite"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">pyshac</span>
 
-<span class="c1"># define the evaluation function</span>
-<span class="k">def</span> <span class="nf">squared_error_loss</span><span class="p">(</span><span class="nb">id</span><span class="p">,</span> <span class="n">parameters</span><span class="p">):</span>
-    <span class="n">x</span> <span class="o">=</span> <span class="n">parameters</span><span class="p">[</span><span class="s1">&#39;x&#39;</span><span class="p">]</span>
-    <span class="n">y</span> <span class="o">=</span> <span class="n">parameters</span><span class="p">[</span><span class="s1">&#39;y&#39;</span><span class="p">]</span>
-    <span class="n">y_sample</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">x</span> <span class="o">-</span> <span class="n">y</span>
-
-    <span class="c1"># assume best values of x and y and 2 and 0 respectively</span>
-    <span class="n">y_true</span> <span class="o">=</span> <span class="mf">4.</span>
-
-    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">square</span><span class="p">(</span><span class="n">y_sample</span> <span class="o">-</span> <span class="n">y_true</span><span class="p">)</span>
-
 <span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>  <span class="c1"># this is required for Windows ; not for Unix or Linux</span>
 
     <span class="c1"># define the parameters</span>
@@ -808,18 +797,42 @@ This eases the training of models as well, since we can be sure of how many samp
     <span class="c1"># define the objective</span>
     <span class="n">objective</span> <span class="o">=</span> <span class="s1">&#39;min&#39;</span>  <span class="c1"># minimize the squared loss</span>
 
-    <span class="n">shac</span> <span class="o">=</span> <span class="n">pyshac</span><span class="o">.</span><span class="n">SHAC</span><span class="p">(</span><span class="n">squared_error_loss</span><span class="p">,</span> <span class="n">parameters</span><span class="p">,</span> <span class="n">total_budget</span><span class="p">,</span> <span class="n">num_batches</span><span class="p">,</span> <span class="n">objective</span><span class="p">)</span>
+    <span class="n">shac</span> <span class="o">=</span> <span class="n">pyshac</span><span class="o">.</span><span class="n">SHAC</span><span class="p">(</span><span class="n">parameters</span><span class="p">,</span> <span class="n">total_budget</span><span class="p">,</span> <span class="n">num_batches</span><span class="p">,</span> <span class="n">objective</span><span class="p">)</span>
 </pre></div>
 
 <p>While this looks like a lot, these few lines are in essence all that is required to define the search space,
 the evaluation measure and the engine.</p>
 <h3 id="training-the-classifiers">Training the classifiers<a class="headerlink" href="#training-the-classifiers" title="Permanent link">&para;</a></h3>
-<p>Once the engine has been created, then it is simply a matter of calling <code>fit()</code> on the engine. This will create the
-worker threads, generate the samples, test them if they pass all of the current classifiers, prepare the dataset for
-that batch, test a cross validated classifier to see if it will train properly on the dataset, finally train a classifier
-and then begin the next epoch.</p>
+<p>To train a classifier, the user must define an Evaluation function. This is a user defined function,
+that accepts 2 or more inputs as defined by the engine, and returns a python floating point value.</p>
+<p>The <strong>Evaluation Function</strong> receives at least 2 inputs :</p>
+<ul>
+<li><strong>Worker ID</strong>: Integer id that can be left alone when executing only on CPU or used to determine the iteration number in the current epoch of evaluation.</li>
+<li><strong>Parameter OrderedDict</strong>: An OrderedDict which contains the (name, value) pairs of the Parameters passed to the engine.<ul>
+<li>Since it is an ordered dict, if only the values are required, <code>list(parameters.values())</code> can be used to get the list of values in the same order as when the Parameters were declared to the engine.</li>
+<li>These are the values of the sampled hyper parameters which have passed through the current cascade of models.</li>
+</ul>
+</li>
+</ul>
+<p>An example of a defined evaluation function :</p>
+<div class="codehilite"><pre><span></span><span class="c1"># define the evaluation function</span>
+<span class="k">def</span> <span class="nf">squared_error_loss</span><span class="p">(</span><span class="nb">id</span><span class="p">,</span> <span class="n">parameters</span><span class="p">):</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">parameters</span><span class="p">[</span><span class="s1">&#39;x&#39;</span><span class="p">]</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="n">parameters</span><span class="p">[</span><span class="s1">&#39;y&#39;</span><span class="p">]</span>
+    <span class="n">y_sample</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">x</span> <span class="o">-</span> <span class="n">y</span>
+
+    <span class="c1"># assume best values of x and y and 2 and 0 respectively</span>
+    <span class="n">y_true</span> <span class="o">=</span> <span class="mf">4.</span>
+
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">square</span><span class="p">(</span><span class="n">y_sample</span> <span class="o">-</span> <span class="n">y_true</span><span class="p">)</span>
+</pre></div>
+
+<p>Once the engine has been created, then it is simply a matter of calling <code>fit()</code> on the engine with the evaluation function
+as the parameter. This will create the worker threads, generate the samples, test them if they pass all of the current
+classifiers, prepare the dataset for that batch, test a cross validated classifier to see if it will train properly on
+the dataset, finally train a classifier and then begin the next epoch.</p>
 <div class="codehilite"><pre><span></span><span class="c1"># assuming shac here is from the above code inside __main__</span>
-<span class="n">shac</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+<span class="n">shac</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">squared_error_loss</span><span class="p">)</span>
 </pre></div>
 
 <p>There are a few cases to consider:</p>
@@ -828,7 +841,7 @@ and then begin the next epoch.</p>
 <li>There may be instances where we want to allow some relaxations of the constraint that the next batch must pass through all
 of the previous classifiers. This allows classifiers to train on the same search space repeatedly rather than divide the search space.</li>
 </ul>
-<p>In these cases, we can utilize a few arguments to allow the training behaviour to better adapt to these circumstances.
+<p>In these cases, we can utilize additional arguments to allow the training behaviour to better adapt to these circumstances.
 These parameters are :</p>
 <ul>
 <li><strong>skip_cv_checks</strong>: As it suggests, if the number of samples per batch is too small, it is preferable to skip the cross validation check, as most classifiers will not pass them.</li>
@@ -836,17 +849,23 @@ These parameters are :</p>
 <li><strong>relax_checks</strong>: This will instead relax the constrain of having the sample pass through all classifiers to having the classifier past through most of the classifiers. In doing so, more samples can be obtained for the same search space.</li>
 </ul>
 <div class="codehilite"><pre><span></span><span class="c1"># `early stopping` default is False, and it is preferred not to use it when using `relax checks`</span>
-<span class="n">shac</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">skip_cv_checks</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">early_stop</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">relax_checks</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+<span class="n">shac</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">squared_error_loss</span><span class="p">,</span> <span class="n">skip_cv_checks</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">early_stop</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">relax_checks</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
 </pre></div>
 
 <h2 id="sampling-the-best-hyper-parameters">Sampling the best hyper parameters<a class="headerlink" href="#sampling-the-best-hyper-parameters" title="Permanent link">&para;</a></h2>
-<p>Once the models have been trained by the engine, it is as simple as calling <code>predict()</code> to sample multiple batches of parameters.
-As it is more efficient to sample several batches at once, <code>predict()</code> will return an a number of batches of sampled hyper paremeters.</p>
-<div class="codehilite"><pre><span></span><span class="c1"># sample a single batch of hyper parameters</span>
-<span class="n">parameter_samples</span> <span class="o">=</span> <span class="n">shac</span><span class="o">.</span><span class="n">predict</span><span class="p">()</span>  <span class="c1"># samples 1 batch, of batch size 10 (10 samples in total)</span>
+<p>Once the models have been trained by the engine, it is as simple as calling <code>predict()</code> to sample multiple samples or batches of parameters.</p>
+<p>Samples can be obtained in a per instance or per batch (or even a combination) using the two parameters - <code>num_samples</code> and <code>num_batches</code>.</p>
+<div class="codehilite"><pre><span></span><span class="c1"># sample a single instance of hyper parameters</span>
+<span class="n">parameter_samples</span> <span class="o">=</span> <span class="n">shac</span><span class="o">.</span><span class="n">predict</span><span class="p">()</span>  <span class="c1"># samples 1 sample.</span>
 
-<span class="c1"># sample more than one batch of hyper parameters</span>
-<span class="n">parameter_samples</span> <span class="o">=</span> <span class="n">shac</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>  <span class="c1"># samples 10 batches, each of batch size 10 (100 samples in total)</span>
+<span class="c1"># sample multiple instances of hyper parameters</span>
+<span class="n">parameter_samples</span> <span class="o">=</span> <span class="n">shac</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>  <span class="c1"># samples 10 samples.</span>
+
+<span class="c1"># sample a batch of hyper parameters</span>
+<span class="n">parameter_samples</span> <span class="o">=</span> <span class="n">shac</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">num_batches</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>  <span class="c1"># samples 5 batches, each containing 10 samples.</span>
+
+<span class="c1"># sample multiple batches and a few additional instances of hyper parameters</span>
+<span class="n">parameter_samples</span> <span class="o">=</span> <span class="n">shac</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>  <span class="c1"># samples 5 batches (each containing 10 samples) and an additional 5 samples.</span>
 </pre></div>
 
 <h3 id="dealing-with-long-sampling-time">Dealing with long sampling time<a class="headerlink" href="#dealing-with-long-sampling-time" title="Permanent link">&para;</a></h3>
@@ -856,8 +875,8 @@ hyper parameter list, let alone a batch. Therefore, it is more efficient to redu
 <li>
 <p><strong>num_workers_per_batch</strong>:</p>
 <ul>
-<li>When using a large batch size or large number of classifiers, it is advisable to have many parallel workers sampling batches at the same time to reduce the amount of time taken to get samples that pass through all classifiers.</li>
-<li>When using a small batch size or small number of classifiers, it is advisable to reduce the time taken to sample each batch by reducing the number of parallel workers.</li>
+<li>When using a large number of samples or large number of classifiers, it is advisable to have many parallel workers sampling batches at the same time to reduce the amount of time taken to get samples that pass through all classifiers.</li>
+<li>When using a small number of samples or small number of classifiers, it is advisable to reduce the time taken to sample each batch by reducing the number of parallel workers.</li>
 <li>If left as <code>None</code>, will determine the value that was used during training.</li>
 </ul>
 </li>
@@ -866,8 +885,8 @@ hyper parameter list, let alone a batch. Therefore, it is more efficient to redu
 </li>
 <li><strong>max_classfiers</strong>: Another way to reduce the time taken to sample parameters is to simply reduce the number of classifiers used to perform the check. This will use the first <code>K</code> classifier stages to perform the checks.</li>
 </ul>
-<div class="codehilite"><pre><span></span><span class="c1"># batch size is 16, so using 16 processes to sample in parallel is more efficient than the default memory conservative count.</span>
-<span class="n">parameter_samples</span> <span class="o">=</span> <span class="n">shac</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="n">num_workers_per_batch</span><span class="o">=</span><span class="mi">16</span><span class="p">,</span> <span class="n">relax_checks</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">max_classfiers</span><span class="o">=</span><span class="mi">16</span><span class="p">)</span>
+<div class="codehilite"><pre><span></span><span class="c1"># number of sample is 16, so using 16 processes to sample in parallel is more efficient than the default memory conservative count.</span>
+<span class="n">parameter_samples</span> <span class="o">=</span> <span class="n">shac</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="mi">16</span><span class="p">,</span> <span class="n">num_workers_per_batch</span><span class="o">=</span><span class="mi">16</span><span class="p">,</span> <span class="n">relax_checks</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">max_classfiers</span><span class="o">=</span><span class="mi">16</span><span class="p">)</span>
 </pre></div>
 
 <h2 id="continuing-training">Continuing Training<a class="headerlink" href="#continuing-training" title="Permanent link">&para;</a></h2>
@@ -891,13 +910,13 @@ define and use the engine before using <code>fit()</code>.</p>
 <p>Example :</p>
 <div class="codehilite"><pre><span></span><span class="c1"># Reduced batch_size allows faster sampling</span>
 <span class="c1"># None for the hyper parameter list as it will be loaded in the restoration step.</span>
-<span class="n">new_shac</span> <span class="o">=</span> <span class="n">pyshac</span><span class="o">.</span><span class="n">SHAC</span><span class="p">(</span><span class="n">squared_error_loss</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="n">total_budget</span><span class="p">,</span> <span class="n">batch_size</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">objective</span><span class="o">=</span><span class="n">objective</span><span class="p">)</span>
+<span class="n">new_shac</span> <span class="o">=</span> <span class="n">pyshac</span><span class="o">.</span><span class="n">SHAC</span><span class="p">(</span><span class="bp">None</span><span class="p">,</span> <span class="n">total_budget</span><span class="p">,</span> <span class="n">batch_size</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">objective</span><span class="o">=</span><span class="n">objective</span><span class="p">)</span>
 
 <span class="c1"># restore the engine</span>
 <span class="n">new_shac</span><span class="o">.</span><span class="n">restore_data</span><span class="p">()</span>
 
 <span class="c1"># predict or train like before</span>
-<span class="n">new_shac</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+<span class="n">new_shac</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">squared_error_loss</span><span class="p">)</span>
 
 <span class="ow">or</span>
 

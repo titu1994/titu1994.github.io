@@ -530,7 +530,7 @@
                 <h1 id="serial-execution-of-evaluation-functions">Serial Execution of Evaluation Functions<a class="headerlink" href="#serial-execution-of-evaluation-functions" title="Permanent link">&para;</a></h1>
 <hr />
 <p>For all engines, to be efficient and reduce execution time, sample generation, and training of models is done using
-Joblib and multiprocessing. However, the evaluation function cannot be managed by the training module, since it is a function written by the user.</p>
+Joblib and Loky. However, the evaluation function cannot be managed by the training module, since it is a function written by the user.</p>
 <p>As such, to offer maximum flexibility, we offer two alternatives :</p>
 <ul>
 <li>Serial Evaluation</li>
@@ -541,7 +541,7 @@ Joblib and multiprocessing. However, the evaluation function cannot be managed b
 engines :</p>
 <ul>
 <li><code>num_parallel_evaluators</code> : Set this to <code>1</code> for serial execution of the evaluation function</li>
-<li><code>evaluator_backend</code> : This is generally set to <code>multiprocessing</code>, but should be set to <code>threading</code> for serial execution.</li>
+<li><code>evaluator_backend</code> : This is generally set to <code>loky</code>, but should be set to <code>threading</code> for serial execution.</li>
 </ul>
 <div class="codehilite"><pre><span></span><span class="n">shac</span> <span class="o">=</span> <span class="n">SHAC</span><span class="p">(</span><span class="n">eval_fn</span><span class="p">,</span> <span class="p">[</span><span class="n">params</span><span class="o">...</span><span class="p">],</span> <span class="n">total_budget</span><span class="p">,</span> <span class="n">batch_size</span><span class="p">)</span>
 
@@ -554,7 +554,7 @@ engines :</p>
 engines :</p>
 <ul>
 <li><code>num_parallel_generators</code> : Set this to <code>1</code> for serial execution of the evaluation function</li>
-<li><code>generator_backend</code> : This is generally set to <code>multiprocessing</code>, but should be set to <code>threading</code> for serial execution.</li>
+<li><code>generator_backend</code> : This is generally set to <code>loky</code>, but should be set to <code>threading</code> for serial execution.</li>
 </ul>
 <div class="codehilite"><pre><span></span><span class="n">shac</span> <span class="o">=</span> <span class="n">SHAC</span><span class="p">(</span><span class="n">eval_fn</span><span class="p">,</span> <span class="p">[</span><span class="n">params</span><span class="o">...</span><span class="p">],</span> <span class="n">total_budget</span><span class="p">,</span> <span class="n">batch_size</span><span class="p">)</span>
 
@@ -566,7 +566,7 @@ engines :</p>
 <div class="admonition info">
 <p class="admonition-title">Helper functions for backends</p>
 <p>All engines support two methods : <code>parallel_evaluators()</code> and <code>concurrent_evaluators()</code>.
-Using this will set the engine to use the <code>multiprocessing</code> and <code>threading</code> backend respectively.</p>
+Using this will set the engine to use the <code>loky</code> and <code>threading</code> backend respectively.</p>
 <p>Due to Python's Global Interpreter Lock, it is possible to use the <code>threading</code> backend to
 reduce the number of parallel executions. However, these models are still executed concurrently,
 therefore it must be ensured that the evaluators do not exhaust the system RAM / GPU RAM.</p>
