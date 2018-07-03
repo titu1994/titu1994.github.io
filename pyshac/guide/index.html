@@ -856,16 +856,16 @@ These parameters are :</p>
 <p>Once the models have been trained by the engine, it is as simple as calling <code>predict()</code> to sample multiple samples or batches of parameters.</p>
 <p>Samples can be obtained in a per instance or per batch (or even a combination) using the two parameters - <code>num_samples</code> and <code>num_batches</code>.</p>
 <div class="codehilite"><pre><span></span><span class="c1"># sample a single instance of hyper parameters</span>
-<span class="n">parameter_samples</span> <span class="o">=</span> <span class="n">shac</span><span class="o">.</span><span class="n">predict</span><span class="p">()</span>  <span class="c1"># samples 1 sample.</span>
+<span class="n">parameter_samples</span> <span class="o">=</span> <span class="n">shac</span><span class="o">.</span><span class="n">predict</span><span class="p">()</span>  <span class="c1"># Gets 1 sample.</span>
 
 <span class="c1"># sample multiple instances of hyper parameters</span>
-<span class="n">parameter_samples</span> <span class="o">=</span> <span class="n">shac</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>  <span class="c1"># samples 10 samples.</span>
+<span class="n">parameter_samples</span> <span class="o">=</span> <span class="n">shac</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>  <span class="c1"># Gets 10 samples.</span>
 
 <span class="c1"># sample a batch of hyper parameters</span>
-<span class="n">parameter_samples</span> <span class="o">=</span> <span class="n">shac</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">num_batches</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>  <span class="c1"># samples 5 batches, each containing 10 samples.</span>
+<span class="n">parameter_samples</span> <span class="o">=</span> <span class="n">shac</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">num_batches</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>  <span class="c1"># Samples 5 batches, each containing 10 samples.</span>
 
 <span class="c1"># sample multiple batches and a few additional instances of hyper parameters</span>
-<span class="n">parameter_samples</span> <span class="o">=</span> <span class="n">shac</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>  <span class="c1"># samples 5 batches (each containing 10 samples) and an additional 5 samples.</span>
+<span class="n">parameter_samples</span> <span class="o">=</span> <span class="n">shac</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>  <span class="c1"># Samples 5 batches (each containing 10 samples) and an additional 5 samples.</span>
 </pre></div>
 
 <h3 id="dealing-with-long-sampling-time">Dealing with long sampling time<a class="headerlink" href="#dealing-with-long-sampling-time" title="Permanent link">&para;</a></h3>
