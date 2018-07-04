@@ -1,0 +1,394 @@
+{
+    "docs": [
+        {
+            "location": "/",
+            "text": "About Me\n\u00b6\n\n\nI'm a Deep Learning and Machine Learning Research enthusiast, currently attempting to implement and\nanalyze various papers in the field of Artificial Intelligence.\n\n\nFor me, research needs to be distributed to as many sources as possible, so that practical applications\nfrom that work can be applied in the field, and is available to as many as possible.\n\n\nI enjoy working on Image Classification and many of its sub-domains, Time Series Classification and\nhave recently started to expand my horizons further - architecture search, optimizers, mobile computing and more.",
+            "title": "Info"
+        },
+        {
+            "location": "/#about-me",
+            "text": "I'm a Deep Learning and Machine Learning Research enthusiast, currently attempting to implement and\nanalyze various papers in the field of Artificial Intelligence.  For me, research needs to be distributed to as many sources as possible, so that practical applications\nfrom that work can be applied in the field, and is available to as many as possible.  I enjoy working on Image Classification and many of its sub-domains, Time Series Classification and\nhave recently started to expand my horizons further - architecture search, optimizers, mobile computing and more.",
+            "title": "About Me"
+        },
+        {
+            "location": "/academia/",
+            "text": "Education\n\u00b6\n\n\n\n\nMaster of Science in Computer Science\n\u00b6\n\n\nUniversity of Illinois at Chicago\n : 3.77 / 4.0\n\n2017-2018, Chicago, IL, USA\n\n\nBachelor of Engineering in Computer Science\n\u00b6\n\n\nD.J. Sanghvi College of Engineering\n : 8.0 / 10.0\n\n2012-2016, Mumbai, Maharashtra, India",
+            "title": "Academia"
+        },
+        {
+            "location": "/academia/#education",
+            "text": "",
+            "title": "Education"
+        },
+        {
+            "location": "/academia/#master-of-science-in-computer-science",
+            "text": "University of Illinois at Chicago  : 3.77 / 4.0 2017-2018, Chicago, IL, USA",
+            "title": "Master of Science in Computer Science"
+        },
+        {
+            "location": "/academia/#bachelor-of-engineering-in-computer-science",
+            "text": "D.J. Sanghvi College of Engineering  : 8.0 / 10.0 2012-2016, Mumbai, Maharashtra, India",
+            "title": "Bachelor of Engineering in Computer Science"
+        },
+        {
+            "location": "/contact/",
+            "text": "Contact information:\n\n\n\n\nGithub : \ntitu1994\n\n\nLinkedIn : \nhttps://www.linkedin.com/in/somshubramajumdar/\n\n\nTwitter : \n@haseoX94\n\n\nMail : \ntitu1994@gmail.com",
+            "title": "Contact"
+        },
+        {
+            "location": "/research/published/",
+            "text": "Journal Publications (Deep Learning)\n\u00b6\n\n\n\n\nLSTM Fully Convolutional Networks for Time Series Classification\n\u00b6\n\n\n\n\nAbstract\n\n\nFully convolutional neural networks (FCNs) have been shown to achieve the state-of-the-art performance on the task of classifying time series sequences. We propose the augmentation of fully convolutional networks with long short term memory recurrent neural network (LSTM RNN) sub-modules for time series classification. Our proposed models significantly enhance the performance of fully convolutional networks with a nominal increase in model size and require minimal preprocessing of the data set. The proposed long short term memory fully convolutional network (LSTM-FCN) achieves the state-of-the-art performance compared with others. We also explore the usage of attention mechanism to improve time series classification with the attention long short term memory fully convolutional network (ALSTM-FCN). The attention mechanism allows one to visualize the decision process of the LSTM cell. Furthermore, we propose refinement as a method to enhance the performance of trained models. An overall analysis of the performance of our model is provided and compared with other techniques.\n\n\n\n\n\n\nMicroaneurysm detection using fully convolutional neural networks\n\u00b6\n\n\n\n\nAbstract\n\n\nBackround and Objectives\n: Diabetic retinopathy is a microvascular complication of diabetes that can lead to sight loss if treated not early enough. Microaneurysms are the earliest clinical signs of diabetic retinopa- thy. This paper presents an automatic method for detecting microaneurysms in fundus photographies.\n\n\nMethods\n: A novel patch-based fully convolutional neural network with batch normalization layers and Dice loss function is proposed. Compared to other methods that require up to \ufb01ve processing stages, it requires only three. Furthermore, to the best of the authors\u2019 knowledge, this is the \ufb01rst paper that shows how to successfully transfer knowledge between datasets in the microaneurysm detection domain.\n\n\nResults\n: The proposed method was evaluated using three publicly available and widely used datasets: E- Ophtha, DIARETDB1, and ROC. It achieved better results than state-of-the-art methods using the FROC metric. The proposed algorithm accomplished highest sensitivities for low false positive rates, which is particularly important for screening purposes.\n\n\n\n\n\n\nMicroaneurysm detection using deep learning and interleaved freezing\n\u00b6\n\n\n\n\nAbstract\n\n\nDiabetes affects one in eleven adults. Diabetic retinopathy is a microvascular complication of diabetes and the leading cause of blindness in the working-age population. Microaneurysms are the earliest clinical signs of diabetic retinopathy. This paper proposes an automatic method for detecting microaneurysms in fundus photographies. A novel patch-based fully convolutional neural network for detection of microaneurysms is proposed. Compared to other methods that require five processing stages, it requires only two. Furthermore, a novel network fine-tuning scheme called Interleaved Freezing is presented. This procedure significantly reduces the amount of time needed to re-train a network and produces competitive results. The proposed method was evaluated using publicly available and widely used datasets: E-Ophtha and ROC. It outperforms the state-of-the-art methods in terms of free-response receiver operatic characteristic (FROC) metric. Simplicity, performance, efficiency and robustness of the proposed method demonstrate its suitability for diabetic retinopathy screening applications.\n\n\n\n\n\n\nJournal Publications (Algorithms Research / Machine Learning)\n\u00b6\n\n\nParallel Quick Sort using Thread Pool Pattern\n\u00b6\n\n\n\n\nAbstract\n\n\nSorting algorithms, their implementations and their applications in modern computing necessitates improvements for sorting large data sets quickly and efficiently. This paper will analyze the performance of a multi-threaded quick sort\nimplemented using the thread pool pattern. The analysis will be done by comparing the time required to sort various data\nsets and their memory constraints, against the native sorting implementations of the Dual Pivot Quicksort and Merge Sort\nusing the Fork-Join framework in the Oracle Java 8 programming language. Analysis is done of the effect of\ndifferent number of processor (cores) of the test machine, as well as the performance barrier due to the initial time taken to\ncreate \u201cp\u201d threads, p being the number of processors. This paper also analyzes the limitations of the inbuilt Java method\nArrays.parallelSort() and how the proposed system overcomes this problem. Finally, it also discuss possible improvements to\nthe proposed system to further improve its performance.\n\n\n\n\n\n\nAdaSort: Adaptive Sorting using Machine Learning\n\u00b6\n\n\n\n\nAbstract\n\n\nSorting algorithms and their implementations in modern\ncomputing requires improvements in sorting large data sets\neffectively, both with respect to time and memory consumed.\nThis paper is aimed at reviewing multiple adaptive sorting\nalgorithms, on the basis of selection of an algorithm based on\nthe characteristics of the data set. Machine Learning allows us\nto construct an adaptive algorithm based on the analysis of the\nexperimental data. A review of algorithms designed using\nSystems of Algorithmic Algebra and Genetic Algorithms was\nperformed. Both methods are designed to target different use\ncases. Systems of Algorithmic Algebra is a representation of\npseudo code that can be converted to high level code using\nIntegrated toolkit for Design and Synthesis of programs, while\nthe Genetic Algorithm attempts to optimize its fitness function\nand generate the most successful algorithm.",
+            "title": "Published"
+        },
+        {
+            "location": "/research/published/#journal-publications-deep-learning",
+            "text": "",
+            "title": "Journal Publications (Deep Learning)"
+        },
+        {
+            "location": "/research/published/#lstm-fully-convolutional-networks-for-time-series-classification",
+            "text": "Abstract  Fully convolutional neural networks (FCNs) have been shown to achieve the state-of-the-art performance on the task of classifying time series sequences. We propose the augmentation of fully convolutional networks with long short term memory recurrent neural network (LSTM RNN) sub-modules for time series classification. Our proposed models significantly enhance the performance of fully convolutional networks with a nominal increase in model size and require minimal preprocessing of the data set. The proposed long short term memory fully convolutional network (LSTM-FCN) achieves the state-of-the-art performance compared with others. We also explore the usage of attention mechanism to improve time series classification with the attention long short term memory fully convolutional network (ALSTM-FCN). The attention mechanism allows one to visualize the decision process of the LSTM cell. Furthermore, we propose refinement as a method to enhance the performance of trained models. An overall analysis of the performance of our model is provided and compared with other techniques.",
+            "title": "LSTM Fully Convolutional Networks for Time Series Classification"
+        },
+        {
+            "location": "/research/published/#microaneurysm-detection-using-fully-convolutional-neural-networks",
+            "text": "Abstract  Backround and Objectives : Diabetic retinopathy is a microvascular complication of diabetes that can lead to sight loss if treated not early enough. Microaneurysms are the earliest clinical signs of diabetic retinopa- thy. This paper presents an automatic method for detecting microaneurysms in fundus photographies.  Methods : A novel patch-based fully convolutional neural network with batch normalization layers and Dice loss function is proposed. Compared to other methods that require up to \ufb01ve processing stages, it requires only three. Furthermore, to the best of the authors\u2019 knowledge, this is the \ufb01rst paper that shows how to successfully transfer knowledge between datasets in the microaneurysm detection domain.  Results : The proposed method was evaluated using three publicly available and widely used datasets: E- Ophtha, DIARETDB1, and ROC. It achieved better results than state-of-the-art methods using the FROC metric. The proposed algorithm accomplished highest sensitivities for low false positive rates, which is particularly important for screening purposes.",
+            "title": "Microaneurysm detection using fully convolutional neural networks"
+        },
+        {
+            "location": "/research/published/#microaneurysm-detection-using-deep-learning-and-interleaved-freezing",
+            "text": "Abstract  Diabetes affects one in eleven adults. Diabetic retinopathy is a microvascular complication of diabetes and the leading cause of blindness in the working-age population. Microaneurysms are the earliest clinical signs of diabetic retinopathy. This paper proposes an automatic method for detecting microaneurysms in fundus photographies. A novel patch-based fully convolutional neural network for detection of microaneurysms is proposed. Compared to other methods that require five processing stages, it requires only two. Furthermore, a novel network fine-tuning scheme called Interleaved Freezing is presented. This procedure significantly reduces the amount of time needed to re-train a network and produces competitive results. The proposed method was evaluated using publicly available and widely used datasets: E-Ophtha and ROC. It outperforms the state-of-the-art methods in terms of free-response receiver operatic characteristic (FROC) metric. Simplicity, performance, efficiency and robustness of the proposed method demonstrate its suitability for diabetic retinopathy screening applications.",
+            "title": "Microaneurysm detection using deep learning and interleaved freezing"
+        },
+        {
+            "location": "/research/published/#journal-publications-algorithms-research-machine-learning",
+            "text": "",
+            "title": "Journal Publications (Algorithms Research / Machine Learning)"
+        },
+        {
+            "location": "/research/published/#parallel-quick-sort-using-thread-pool-pattern",
+            "text": "Abstract  Sorting algorithms, their implementations and their applications in modern computing necessitates improvements for sorting large data sets quickly and efficiently. This paper will analyze the performance of a multi-threaded quick sort\nimplemented using the thread pool pattern. The analysis will be done by comparing the time required to sort various data\nsets and their memory constraints, against the native sorting implementations of the Dual Pivot Quicksort and Merge Sort\nusing the Fork-Join framework in the Oracle Java 8 programming language. Analysis is done of the effect of\ndifferent number of processor (cores) of the test machine, as well as the performance barrier due to the initial time taken to\ncreate \u201cp\u201d threads, p being the number of processors. This paper also analyzes the limitations of the inbuilt Java method\nArrays.parallelSort() and how the proposed system overcomes this problem. Finally, it also discuss possible improvements to\nthe proposed system to further improve its performance.",
+            "title": "Parallel Quick Sort using Thread Pool Pattern"
+        },
+        {
+            "location": "/research/published/#adasort-adaptive-sorting-using-machine-learning",
+            "text": "Abstract  Sorting algorithms and their implementations in modern\ncomputing requires improvements in sorting large data sets\neffectively, both with respect to time and memory consumed.\nThis paper is aimed at reviewing multiple adaptive sorting\nalgorithms, on the basis of selection of an algorithm based on\nthe characteristics of the data set. Machine Learning allows us\nto construct an adaptive algorithm based on the analysis of the\nexperimental data. A review of algorithms designed using\nSystems of Algorithmic Algebra and Genetic Algorithms was\nperformed. Both methods are designed to target different use\ncases. Systems of Algorithmic Algebra is a representation of\npseudo code that can be converted to high level code using\nIntegrated toolkit for Design and Synthesis of programs, while\nthe Genetic Algorithm attempts to optimize its fitness function\nand generate the most successful algorithm.",
+            "title": "AdaSort: Adaptive Sorting using Machine Learning"
+        },
+        {
+            "location": "/research/preprints/",
+            "text": "Arxiv Pre-prints\n\u00b6\n\n\n\n\nMultivariate LSTM-FCNs for Time Series Classification\n\u00b6\n\n\n\n\nAbstract\n\n\nOver the past decade, multivariate time series classification has been receiving a lot of attention. We propose augmenting the existing univariate time series classification models, LSTM-FCN and ALSTM-FCN with a squeeze and excitation block to further improve performance. Our proposed models outperform most of the state of the art models while requiring minimum preprocessing. The proposed models work efficiently on various complex multivariate time series classification tasks such as activity recognition or action recognition. Furthermore, the proposed models are highly efficient at test time and small enough to deploy on memory constrained systems.\n\n\n\n\n\n\nLSTM Fully Convolutional Networks for Time Series Classification\n\u00b6\n\n\n\n\nAbstract\n\n\nFully convolutional neural networks (FCN) have been shown to achieve state-of-the-art performance on\nthe task of classifying time series sequences. We propose the augmentation of fully convolutional\nnetworks with long short term memory recurrent neural network (LSTM RNN) sub-modules for time series\nclassification. Our proposed models significantly enhance the performance of fully convolutional\nnetworks with a nominal increase in model size and require minimal preprocessing of the dataset.\nThe proposed Long Short Term Memory Fully Convolutional Network (LSTM-FCN) achieves state-of-the-art\nperformance compared to others. We also explore the usage of attention mechanism to improve time\nseries classification with the Attention Long Short Term Memory Fully Convolutional Network\n(ALSTM-FCN). Utilization of the attention mechanism allows one to visualize the decision process\nof the LSTM cell. Furthermore, we propose fine-tuning as a method to enhance the performance of\ntrained models. An overall analysis of the performance of our model is provided and compared to\nother techniques.\n\n\n\n\n\n\nA Comprehensive Comparison between Neural Style Transfer and Universal Style Transfer\n\u00b6\n\n\n\n\nAbstract\n\n\nStyle transfer aims to transfer arbitrary visual styles to content images. We explore algorithms adapted from two papers that try to solve the problem of style transfer while generalizing on unseen styles or compromised visual quality. Majority of the improvements made focus on optimizing the algorithm for real-time style transfer while adapting to new styles with considerably less resources and constraints. We compare these strategies and compare how they measure up to produce visually appealing images. We explore two approaches to style transfer: neural style transfer with improvements and universal style transfer. We also make a comparison between the different images produced and how they can be qualitatively measured.",
+            "title": "Preprints"
+        },
+        {
+            "location": "/research/preprints/#arxiv-pre-prints",
+            "text": "",
+            "title": "Arxiv Pre-prints"
+        },
+        {
+            "location": "/research/preprints/#multivariate-lstm-fcns-for-time-series-classification",
+            "text": "Abstract  Over the past decade, multivariate time series classification has been receiving a lot of attention. We propose augmenting the existing univariate time series classification models, LSTM-FCN and ALSTM-FCN with a squeeze and excitation block to further improve performance. Our proposed models outperform most of the state of the art models while requiring minimum preprocessing. The proposed models work efficiently on various complex multivariate time series classification tasks such as activity recognition or action recognition. Furthermore, the proposed models are highly efficient at test time and small enough to deploy on memory constrained systems.",
+            "title": "Multivariate LSTM-FCNs for Time Series Classification"
+        },
+        {
+            "location": "/research/preprints/#lstm-fully-convolutional-networks-for-time-series-classification",
+            "text": "Abstract  Fully convolutional neural networks (FCN) have been shown to achieve state-of-the-art performance on\nthe task of classifying time series sequences. We propose the augmentation of fully convolutional\nnetworks with long short term memory recurrent neural network (LSTM RNN) sub-modules for time series\nclassification. Our proposed models significantly enhance the performance of fully convolutional\nnetworks with a nominal increase in model size and require minimal preprocessing of the dataset.\nThe proposed Long Short Term Memory Fully Convolutional Network (LSTM-FCN) achieves state-of-the-art\nperformance compared to others. We also explore the usage of attention mechanism to improve time\nseries classification with the Attention Long Short Term Memory Fully Convolutional Network\n(ALSTM-FCN). Utilization of the attention mechanism allows one to visualize the decision process\nof the LSTM cell. Furthermore, we propose fine-tuning as a method to enhance the performance of\ntrained models. An overall analysis of the performance of our model is provided and compared to\nother techniques.",
+            "title": "LSTM Fully Convolutional Networks for Time Series Classification"
+        },
+        {
+            "location": "/research/preprints/#a-comprehensive-comparison-between-neural-style-transfer-and-universal-style-transfer",
+            "text": "Abstract  Style transfer aims to transfer arbitrary visual styles to content images. We explore algorithms adapted from two papers that try to solve the problem of style transfer while generalizing on unseen styles or compromised visual quality. Majority of the improvements made focus on optimizing the algorithm for real-time style transfer while adapting to new styles with considerably less resources and constraints. We compare these strategies and compare how they measure up to produce visually appealing images. We explore two approaches to style transfer: neural style transfer with improvements and universal style transfer. We also make a comparison between the different images produced and how they can be qualitatively measured.",
+            "title": "A Comprehensive Comparison between Neural Style Transfer and Universal Style Transfer"
+        },
+        {
+            "location": "/projects/dl/style-transfer/",
+            "text": "Naural Style Transfer\n\u00b6\n\n\n\n\nGatys' Style Transfer\n\u00b6\n\n\nKeras implementation of Style Transfer, with several improvements from recent papers. Has a Google Colaboratory\nscript to use the scripts on GPU's available in the cloud.\n\n\n\n\nNeural Style Transfer\n\n\n\n\n\n\nWindows Application for Gatys' Style Transfer\n\u00b6\n\n\nWindows Form application written in C# to allow easy changing of Neural Style Transfer scripts.\n\n\n\n\nWindows Forms - Style Transfer Application\n\n\n\n\n\n\nFast Style Transfer\n\u00b6\n\n\nUnstable implementation of Feed-Forward Style Transfer in Keras.\n\n\n\n\nFast Style Transfer",
+            "title": "Neural Style Transfer"
+        },
+        {
+            "location": "/projects/dl/style-transfer/#naural-style-transfer",
+            "text": "",
+            "title": "Naural Style Transfer"
+        },
+        {
+            "location": "/projects/dl/style-transfer/#gatys-style-transfer",
+            "text": "Keras implementation of Style Transfer, with several improvements from recent papers. Has a Google Colaboratory\nscript to use the scripts on GPU's available in the cloud.   Neural Style Transfer",
+            "title": "Gatys' Style Transfer"
+        },
+        {
+            "location": "/projects/dl/style-transfer/#windows-application-for-gatys-style-transfer",
+            "text": "Windows Form application written in C# to allow easy changing of Neural Style Transfer scripts.   Windows Forms - Style Transfer Application",
+            "title": "Windows Application for Gatys' Style Transfer"
+        },
+        {
+            "location": "/projects/dl/style-transfer/#fast-style-transfer",
+            "text": "Unstable implementation of Feed-Forward Style Transfer in Keras.   Fast Style Transfer",
+            "title": "Fast Style Transfer"
+        },
+        {
+            "location": "/projects/dl/super-resolution/",
+            "text": "Neural Image Super-Resolution\n\u00b6\n\n\n\n\nImage Super-Resolution\n\u00b6\n\n\nImplementation of Image Super Resolution CNNs in Keras from the paper \nImage Super-Resolution Using Deep Convolutional Networks\n.\n\n\nAlso contains a modular framework, which allows a variety of other super resolution models to be trained and distilled :\n\n\n1) \nDenoising Autoencoder SR models\n \n\n2) \nResNet SR models\n  \n\n3) \nEfficient SubPixel Convolutional SR models\n \n\n4) \nDistilled ResNet SR models\n \n\n5) \nNon-Local ResNet SR models\n (experimental) \n\n\n\n\nImage Super-Resolution\n\n\n\n\n\n\nImage Super-Resolution using GANs\n\u00b6\n\n\nAn incomplete project that attempts to implement the SRGAN model proposed in the paper \nPhoto-Realistic Single\n Image Super-Resolution Using a Generative Adversarial Network\n in Keras.\n\n\n\n\nSuper-Resolution using Generative Adversarial Networks",
+            "title": "Image Super-Resolution"
+        },
+        {
+            "location": "/projects/dl/super-resolution/#neural-image-super-resolution",
+            "text": "",
+            "title": "Neural Image Super-Resolution"
+        },
+        {
+            "location": "/projects/dl/super-resolution/#image-super-resolution",
+            "text": "Implementation of Image Super Resolution CNNs in Keras from the paper  Image Super-Resolution Using Deep Convolutional Networks .  Also contains a modular framework, which allows a variety of other super resolution models to be trained and distilled :  1)  Denoising Autoencoder SR models   \n2)  ResNet SR models    \n3)  Efficient SubPixel Convolutional SR models   \n4)  Distilled ResNet SR models   \n5)  Non-Local ResNet SR models  (experimental)    Image Super-Resolution",
+            "title": "Image Super-Resolution"
+        },
+        {
+            "location": "/projects/dl/super-resolution/#image-super-resolution-using-gans",
+            "text": "An incomplete project that attempts to implement the SRGAN model proposed in the paper  Photo-Realistic Single\n Image Super-Resolution Using a Generative Adversarial Network  in Keras.   Super-Resolution using Generative Adversarial Networks",
+            "title": "Image Super-Resolution using GANs"
+        },
+        {
+            "location": "/projects/dl/image-classifiers/",
+            "text": "Keras Image Classifiers\n\u00b6\n\n\nModel building scripts which replicate the architectures of various state of the art papers.\nAll of these models are built in Keras or Tensorflow.\n\n\n\n\nNon-Local Neural Networks\n\u00b6\n\n\nKeras implementation of Non-local blocks from the paper \nNon-local Neural Networks\n.\n\n\n\n\nSupport for \"Gaussian\", \"Embedded Gaussian\" and \"Dot\" instantiations of the Non-Local block.\n\n\nSupport for variable shielded computation mode (reduces computation by N**2 x, where N is default to 2)\n\n\nSupport for \"Concatenation\" instantiation will be supported when authors release their code.\n\n\n\n\n\n\nSqueeze & Excitation Networks\n\u00b6\n\n\nImplementation of \nSqueeze and Excitation Networks\n, as an independent block\nthat can be added to any Keras layer, or pre-built models such as :\n\n\n\n\nSE-ResNet\n. Custom ResNets can be built using the SEResNet model builder, whereas prebuilt Resnet models such as SEResNet50, SEResNet101 and SEResNet154 can also be built directly.\n\n\nSE-InceptionV3\n\n\nSE-Inception-ResNet-v2\n\n\nSE-ResNeXt\n\n\n\n\nAdditional models (not from the paper, not verified if they improve performance)\n\n\n\n\nSE-MobileNets\n\n\nSE-DenseNet\n - Custom SE-DenseNets can be built using SEDenseNet model builder, whereas prebuilt SEDenseNet models such as SEDenseNetImageNet121, SEDenseNetImageNet169, SEDenseNetImageNet161, SEDenseNetImageNet201 and SEDenseNetImageNet264 can be build DenseNet in ImageNet configuration. To use SEDenseNet in CIFAR mode, use the SEDenseNet model builder.\n\n\n\n\n\n\nNASNet\n\u00b6\n\n\nAn implementation of \"NASNet\" models from the paper \nLearning Transferable Architectures for Scalable Image Recognitio\n in Keras 2.0+.\n\n\nBased on the models described in the TFSlim implementation and some modules from the TensorNets implementation.\n\n\nWeights have been ported over from the official NASNet Tensorflow repository\n.\n\n\n\n\nMobileNets V1 and V2\n\u00b6\n\n\nKeras implementation of the paper \nMobileNets: Efficient Convolutional Neural Networks for Mobile Vision Applications\n.\n\n\nContains the Keras implementation of the paper \nMobileNetV2: Inverted Residuals and Linear Bottlenecks\n.\n\n\nWeights for all variants of MobileNet V1 and MobileNet V2 are available\n.\n\n\n\n\nSparseNets\n\u00b6\n\n\nKeras Implementation of Sparse Networks from the paper \nSparsely Connected Convolutional Networks\n.\n\n\nCode derived from the offical repository - \nhttps://github.com/Lyken17/SparseNet\n\n\nNo weights available as they are not released\n.\n\n\n\n\nDual Path Networks\n\u00b6\n\n\nDual Path Networks\n are highly efficient networks which combine the strength of both ResNeXt \nAggregated Residual Transformations for Deep Neural Networks\n and DenseNets \nDensely Connected Convolutional Networks\n.\n\n\nDue to Keras and Tensorflow not supporting \nGrouped Convolutions\n yet, this is an inefficient implementation with no weights\n.\n\n\n\n\nResNeXt\n\u00b6\n\n\nImplementation of ResNeXt models from the paper \nAggregated Residual Transformations for Deep Neural Networks\n in Keras 2.0+.\n\n\nContains code for building the general ResNeXt model (optimized for datasets similar to CIFAR) and ResNeXtImageNet (optimized for the ImageNet dataset).\n\n\nDue to Keras and Tensorflow not supporting \nGrouped Convolutions\n yet, this is an inefficient implementation with no weights\n.\n\n\n\n\nInception v4 / Inception ResNet v2\n\u00b6\n\n\nImplementations of the Inception-v4, Inception - Resnet-v1 and v2 Architectures in Keras using the Functional API. The paper on these architectures is available at \nInception-v4, Inception-ResNet and the Impact of Residual Connections on Learning\n.\n\n\nWeights are provided for Inception v4 and Inception ResNet v2 Models\n.\n\n\n\n\nDenseNets\n\u00b6\n\n\nDenseNet implementation of the paper \nDensely Connected Convolutional Networks\n in Keras\n\n\nNow supports the more efficient DenseNet-BC (DenseNet-Bottleneck-Compressed) networks. Using the DenseNet-BC-190-40 model, it obtaines state of the art performance on CIFAR-10 and CIFAR-100\n\n\nWeights are provided for DenseNet Models\n.\n\n\n\n\nWide Residual Networks\n\u00b6\n\n\nImplementation of Wide Residual Networks from the paper \nWide Residual Networks\n in Keras.\n\n\nNo weights available due to limited computation available\n.\n\n\n\n\nResidual-of-Residual Networks\n\u00b6\n\n\nThis is an implementation of the paper \nResidual Networks of Residual Networks: Multilevel Residual Networks",
+            "title": "Image Classifiers"
+        },
+        {
+            "location": "/projects/dl/image-classifiers/#keras-image-classifiers",
+            "text": "Model building scripts which replicate the architectures of various state of the art papers.\nAll of these models are built in Keras or Tensorflow.",
+            "title": "Keras Image Classifiers"
+        },
+        {
+            "location": "/projects/dl/image-classifiers/#non-local-neural-networks",
+            "text": "Keras implementation of Non-local blocks from the paper  Non-local Neural Networks .   Support for \"Gaussian\", \"Embedded Gaussian\" and \"Dot\" instantiations of the Non-Local block.  Support for variable shielded computation mode (reduces computation by N**2 x, where N is default to 2)  Support for \"Concatenation\" instantiation will be supported when authors release their code.",
+            "title": "Non-Local Neural Networks"
+        },
+        {
+            "location": "/projects/dl/image-classifiers/#squeeze-excitation-networks",
+            "text": "Implementation of  Squeeze and Excitation Networks , as an independent block\nthat can be added to any Keras layer, or pre-built models such as :   SE-ResNet . Custom ResNets can be built using the SEResNet model builder, whereas prebuilt Resnet models such as SEResNet50, SEResNet101 and SEResNet154 can also be built directly.  SE-InceptionV3  SE-Inception-ResNet-v2  SE-ResNeXt   Additional models (not from the paper, not verified if they improve performance)   SE-MobileNets  SE-DenseNet  - Custom SE-DenseNets can be built using SEDenseNet model builder, whereas prebuilt SEDenseNet models such as SEDenseNetImageNet121, SEDenseNetImageNet169, SEDenseNetImageNet161, SEDenseNetImageNet201 and SEDenseNetImageNet264 can be build DenseNet in ImageNet configuration. To use SEDenseNet in CIFAR mode, use the SEDenseNet model builder.",
+            "title": "Squeeze &amp; Excitation Networks"
+        },
+        {
+            "location": "/projects/dl/image-classifiers/#nasnet",
+            "text": "An implementation of \"NASNet\" models from the paper  Learning Transferable Architectures for Scalable Image Recognitio  in Keras 2.0+.  Based on the models described in the TFSlim implementation and some modules from the TensorNets implementation.  Weights have been ported over from the official NASNet Tensorflow repository .",
+            "title": "NASNet"
+        },
+        {
+            "location": "/projects/dl/image-classifiers/#mobilenets-v1-and-v2",
+            "text": "Keras implementation of the paper  MobileNets: Efficient Convolutional Neural Networks for Mobile Vision Applications .  Contains the Keras implementation of the paper  MobileNetV2: Inverted Residuals and Linear Bottlenecks .  Weights for all variants of MobileNet V1 and MobileNet V2 are available .",
+            "title": "MobileNets V1 and V2"
+        },
+        {
+            "location": "/projects/dl/image-classifiers/#sparsenets",
+            "text": "Keras Implementation of Sparse Networks from the paper  Sparsely Connected Convolutional Networks .  Code derived from the offical repository -  https://github.com/Lyken17/SparseNet  No weights available as they are not released .",
+            "title": "SparseNets"
+        },
+        {
+            "location": "/projects/dl/image-classifiers/#dual-path-networks",
+            "text": "Dual Path Networks  are highly efficient networks which combine the strength of both ResNeXt  Aggregated Residual Transformations for Deep Neural Networks  and DenseNets  Densely Connected Convolutional Networks .  Due to Keras and Tensorflow not supporting  Grouped Convolutions  yet, this is an inefficient implementation with no weights .",
+            "title": "Dual Path Networks"
+        },
+        {
+            "location": "/projects/dl/image-classifiers/#resnext",
+            "text": "Implementation of ResNeXt models from the paper  Aggregated Residual Transformations for Deep Neural Networks  in Keras 2.0+.  Contains code for building the general ResNeXt model (optimized for datasets similar to CIFAR) and ResNeXtImageNet (optimized for the ImageNet dataset).  Due to Keras and Tensorflow not supporting  Grouped Convolutions  yet, this is an inefficient implementation with no weights .",
+            "title": "ResNeXt"
+        },
+        {
+            "location": "/projects/dl/image-classifiers/#inception-v4-inception-resnet-v2",
+            "text": "Implementations of the Inception-v4, Inception - Resnet-v1 and v2 Architectures in Keras using the Functional API. The paper on these architectures is available at  Inception-v4, Inception-ResNet and the Impact of Residual Connections on Learning .  Weights are provided for Inception v4 and Inception ResNet v2 Models .",
+            "title": "Inception v4 / Inception ResNet v2"
+        },
+        {
+            "location": "/projects/dl/image-classifiers/#densenets",
+            "text": "DenseNet implementation of the paper  Densely Connected Convolutional Networks  in Keras  Now supports the more efficient DenseNet-BC (DenseNet-Bottleneck-Compressed) networks. Using the DenseNet-BC-190-40 model, it obtaines state of the art performance on CIFAR-10 and CIFAR-100  Weights are provided for DenseNet Models .",
+            "title": "DenseNets"
+        },
+        {
+            "location": "/projects/dl/image-classifiers/#wide-residual-networks",
+            "text": "Implementation of Wide Residual Networks from the paper  Wide Residual Networks  in Keras.  No weights available due to limited computation available .",
+            "title": "Wide Residual Networks"
+        },
+        {
+            "location": "/projects/dl/image-classifiers/#residual-of-residual-networks",
+            "text": "This is an implementation of the paper  Residual Networks of Residual Networks: Multilevel Residual Networks",
+            "title": "Residual-of-Residual Networks"
+        },
+        {
+            "location": "/projects/dl/time-series-classification/",
+            "text": "Keras Time Series Classifiers / Recurrent Nets\n\u00b6\n\n\nScripts which provide a large number of custom Recurrent Neural Network implementations, which can be dropin\nreplaced for LSTM or GRUs. All of these models are built in Keras or Tensorflow.\n\n\n\n\nLSTM Fully Convolutional Networks\n\u00b6\n\n\nLSTM FCN models, from the paper \nLSTM Fully Convolutional Networks for Time Series Classification\n, augment the fast classification performance of Temporal Convolutional layers with the precise classification of Long Short Term Memory Recurrent Neural Networks.\n\n\n\n\nMultivariate LSTM Fully Convolutional Networks\n\u00b6\n\n\nMLSTM FCN models, from the paper \nMultivariate LSTM-FCNs for Time Series Classification\n, augment the squeeze and excitation block with the state of the art univariate time series model, LSTM-FCN and ALSTM-FCN from the paper \nLSTM Fully Convolutional Networks for Time Series Classification\n.\n\n\n\n\nChrono LSTM / Just Another Neural Network (JANET)\n\u00b6\n\n\nKeras implementation of the paper \nThe unreasonable effectiveness of the forget gate\n and the Chrono initializer and Chrono LSTM from the paper \nCan Recurrent Neural Networks Warp Time?\n.\n\n\nThis model utilizes just 2 gates - forget (f) and context \u00a9 gates out of the 4 gates in a regular LSTM RNN, and uses Chrono Initialization to acheive better performance than regular LSTMs while using fewer parameters and less complicated gating structure.\n\n\n\n\nIndependent RNN (IndRNN)\n\u00b6\n\n\nKeras implementation of the IndRNN model from the paper \nIndependently Recurrent Neural Network (IndRNN): Building A Longer and Deeper RNN\n.\n\n\n\n\nSimple Recurrent Unit (SRU)\n\u00b6\n\n\nImplementation of Simple Recurrent Unit in Keras. Paper - \nTraining RNNs as Fast as CNNs\n.\n\n\n\n\nThis is a naive implementation with some speed gains over the generic LSTM cells, however its speed is not yet 10x that of cuDNN LSTMs\n\n\n\n\n\n\nNested LSTMs\n\u00b6\n\n\nKeras implementation of Nested LSTMs from the paper \nNested LSTMs\n.\n\n\n\n\nNested LSTMs add depth to LSTMs via nesting as opposed to stacking. The value of a memory cell in an NLSTM is computed by an LSTM cell, which has its own inner memory cell. Nested LSTMs outperform both stacked and single-layer LSTMs with similar numbers of parameters in our experiments on various character-level language modeling tasks, and the inner memories of an LSTM learn longer term dependencies compared with the higher-level units of a stacked LSTM.\n\n\n\n\n\n\nMultiplicative LSTMs\n\u00b6\n\n\nImplementation of the paper \nMultiplicative LSTM\n for sequence modelling for Keras 2.0+.\n\n\nMultiplicative LSTMs have been shown to achieve state-of-the-art or close to SotA results for sequence modelling datasets. They also perform better than stacked LSTM models for the Hutter-prize dataset and the raw wikipedia dataset.\n\n\n\n\nMinimal RNN\n\u00b6\n\n\nKeras implementation of \nMinimalRNN: Toward More Interpretable and Trainable Recurrent Neural Networks\n.",
+            "title": "Time Series Classification"
+        },
+        {
+            "location": "/projects/dl/time-series-classification/#keras-time-series-classifiers-recurrent-nets",
+            "text": "Scripts which provide a large number of custom Recurrent Neural Network implementations, which can be dropin\nreplaced for LSTM or GRUs. All of these models are built in Keras or Tensorflow.",
+            "title": "Keras Time Series Classifiers / Recurrent Nets"
+        },
+        {
+            "location": "/projects/dl/time-series-classification/#lstm-fully-convolutional-networks",
+            "text": "LSTM FCN models, from the paper  LSTM Fully Convolutional Networks for Time Series Classification , augment the fast classification performance of Temporal Convolutional layers with the precise classification of Long Short Term Memory Recurrent Neural Networks.",
+            "title": "LSTM Fully Convolutional Networks"
+        },
+        {
+            "location": "/projects/dl/time-series-classification/#multivariate-lstm-fully-convolutional-networks",
+            "text": "MLSTM FCN models, from the paper  Multivariate LSTM-FCNs for Time Series Classification , augment the squeeze and excitation block with the state of the art univariate time series model, LSTM-FCN and ALSTM-FCN from the paper  LSTM Fully Convolutional Networks for Time Series Classification .",
+            "title": "Multivariate LSTM Fully Convolutional Networks"
+        },
+        {
+            "location": "/projects/dl/time-series-classification/#chrono-lstm-just-another-neural-network-janet",
+            "text": "Keras implementation of the paper  The unreasonable effectiveness of the forget gate  and the Chrono initializer and Chrono LSTM from the paper  Can Recurrent Neural Networks Warp Time? .  This model utilizes just 2 gates - forget (f) and context \u00a9 gates out of the 4 gates in a regular LSTM RNN, and uses Chrono Initialization to acheive better performance than regular LSTMs while using fewer parameters and less complicated gating structure.",
+            "title": "Chrono LSTM / Just Another Neural Network (JANET)"
+        },
+        {
+            "location": "/projects/dl/time-series-classification/#independent-rnn-indrnn",
+            "text": "Keras implementation of the IndRNN model from the paper  Independently Recurrent Neural Network (IndRNN): Building A Longer and Deeper RNN .",
+            "title": "Independent RNN (IndRNN)"
+        },
+        {
+            "location": "/projects/dl/time-series-classification/#simple-recurrent-unit-sru",
+            "text": "Implementation of Simple Recurrent Unit in Keras. Paper -  Training RNNs as Fast as CNNs .   This is a naive implementation with some speed gains over the generic LSTM cells, however its speed is not yet 10x that of cuDNN LSTMs",
+            "title": "Simple Recurrent Unit (SRU)"
+        },
+        {
+            "location": "/projects/dl/time-series-classification/#nested-lstms",
+            "text": "Keras implementation of Nested LSTMs from the paper  Nested LSTMs .   Nested LSTMs add depth to LSTMs via nesting as opposed to stacking. The value of a memory cell in an NLSTM is computed by an LSTM cell, which has its own inner memory cell. Nested LSTMs outperform both stacked and single-layer LSTMs with similar numbers of parameters in our experiments on various character-level language modeling tasks, and the inner memories of an LSTM learn longer term dependencies compared with the higher-level units of a stacked LSTM.",
+            "title": "Nested LSTMs"
+        },
+        {
+            "location": "/projects/dl/time-series-classification/#multiplicative-lstms",
+            "text": "Implementation of the paper  Multiplicative LSTM  for sequence modelling for Keras 2.0+.  Multiplicative LSTMs have been shown to achieve state-of-the-art or close to SotA results for sequence modelling datasets. They also perform better than stacked LSTM models for the Hutter-prize dataset and the raw wikipedia dataset.",
+            "title": "Multiplicative LSTMs"
+        },
+        {
+            "location": "/projects/dl/time-series-classification/#minimal-rnn",
+            "text": "Keras implementation of  MinimalRNN: Toward More Interpretable and Trainable Recurrent Neural Networks .",
+            "title": "Minimal RNN"
+        },
+        {
+            "location": "/projects/dl/nas/",
+            "text": "Neural Architecture Search\n\u00b6\n\n\nUtilization of a Controller using Reinforcement Learning, Sequentual Model Based Optimization to train via\nsurrogate losses, or using XGBoost Trees to reduce the search space.\n\n\n\n\nNeural Architecture Search\n\u00b6\n\n\nBasic and limited (1 GPU) implementation of Controller RNN from \nNeural Architecture Search with Reinforcement Learning\n and \nLearning Transferable Architectures for Scalable Image Recognition\n.\n\n\n\n\nUses Keras to define and train children / generated networks, which are defined in Tensorflow by the Controller RNN.\n\n\nDefine a state space by using StateSpace, a manager which adds states and handles communication between the Controller RNN and the user.\n\n\nController manages the training and evaluation of the Controller RNN\n\n\nNetworkManager handles the training and reward computation of a Keras model\n\n\n\n\n\n\nProgressive Neural Architecture Search\n\u00b6\n\n\nBasic and limited (1 GPU) implementation of Encoder RNN from \nProgressive Neural Architecture Search\n.\n\n\n\n\nUses Keras to define and train children / generated networks, which are found via sequential model-based optimization in Tensorflow, ranked by the Encoder RNN.\n\n\nDefine a state space by using StateSpace, a manager which maintains input states and handles communication between the Encoder RNN and the user.\n\n\nEncoder manages the training and evaluation of the Encoder RNN\n\n\nNetworkManager handles the training and reward computation of the children Keras model\n\n\n\n\n\n\nSequentual Halving and Classification\n\u00b6\n\n\nPySHAC\n is a python library to use the Sequential Halving and Classification algorithm from the paper \nParallel Architecture and Hyperparameter Search via Successive Halving and Classification\n with ease.\n\n\nNote : This library is not affiliated with Google.\n\n\nStable build documentation can be found at \nPySHAC Documentation\n.\n\n\nIt contains a User Guide, as well as explanation of the different engines that can be used with PySHAC.",
+            "title": "Neural Architecture Search"
+        },
+        {
+            "location": "/projects/dl/nas/#neural-architecture-search",
+            "text": "Utilization of a Controller using Reinforcement Learning, Sequentual Model Based Optimization to train via\nsurrogate losses, or using XGBoost Trees to reduce the search space.",
+            "title": "Neural Architecture Search"
+        },
+        {
+            "location": "/projects/dl/nas/#neural-architecture-search_1",
+            "text": "Basic and limited (1 GPU) implementation of Controller RNN from  Neural Architecture Search with Reinforcement Learning  and  Learning Transferable Architectures for Scalable Image Recognition .   Uses Keras to define and train children / generated networks, which are defined in Tensorflow by the Controller RNN.  Define a state space by using StateSpace, a manager which adds states and handles communication between the Controller RNN and the user.  Controller manages the training and evaluation of the Controller RNN  NetworkManager handles the training and reward computation of a Keras model",
+            "title": "Neural Architecture Search"
+        },
+        {
+            "location": "/projects/dl/nas/#progressive-neural-architecture-search",
+            "text": "Basic and limited (1 GPU) implementation of Encoder RNN from  Progressive Neural Architecture Search .   Uses Keras to define and train children / generated networks, which are found via sequential model-based optimization in Tensorflow, ranked by the Encoder RNN.  Define a state space by using StateSpace, a manager which maintains input states and handles communication between the Encoder RNN and the user.  Encoder manages the training and evaluation of the Encoder RNN  NetworkManager handles the training and reward computation of the children Keras model",
+            "title": "Progressive Neural Architecture Search"
+        },
+        {
+            "location": "/projects/dl/nas/#sequentual-halving-and-classification",
+            "text": "PySHAC  is a python library to use the Sequential Halving and Classification algorithm from the paper  Parallel Architecture and Hyperparameter Search via Successive Halving and Classification  with ease.  Note : This library is not affiliated with Google.  Stable build documentation can be found at  PySHAC Documentation .  It contains a User Guide, as well as explanation of the different engines that can be used with PySHAC.",
+            "title": "Sequentual Halving and Classification"
+        },
+        {
+            "location": "/projects/dl/contrib/",
+            "text": "Contributions to Keras and Keras Contrib\n\u00b6\n\n\n\n\nKeras Applications\n\u00b6\n\n\nVarious state of the art models listed below were merged with Keras or Keras contrib as below :\n\n\n\n\nNASNet \n(Keras)\n\n\nMobilNet V1 \n(Keras)\n\n\nNASNet \n(Keras-Contrib)\n\n\nDenseNet \n(Keras-Contrib)\n\n\nWide ResNet \n(Keras-Contrib)\n\n\nResidual of Residual Networks \n(Keras-Contrib)\n\n\n\n\n\n\nContrib Callbacks\n\u00b6\n\n\nAdded the Snapshot Ensemble callback manager for Contrib.\n\n\n\n\nContrib Layers\n\u00b6\n\n\nAdded a few layers to Keras Contrib :\n\n\n\n\nSubPixelUpscaling\n\n\nBatchRenormalization\n\n\nGroupNormalization",
+            "title": "Keras Contrib"
+        },
+        {
+            "location": "/projects/dl/contrib/#contributions-to-keras-and-keras-contrib",
+            "text": "",
+            "title": "Contributions to Keras and Keras Contrib"
+        },
+        {
+            "location": "/projects/dl/contrib/#keras-applications",
+            "text": "Various state of the art models listed below were merged with Keras or Keras contrib as below :   NASNet  (Keras)  MobilNet V1  (Keras)  NASNet  (Keras-Contrib)  DenseNet  (Keras-Contrib)  Wide ResNet  (Keras-Contrib)  Residual of Residual Networks  (Keras-Contrib)",
+            "title": "Keras Applications"
+        },
+        {
+            "location": "/projects/dl/contrib/#contrib-callbacks",
+            "text": "Added the Snapshot Ensemble callback manager for Contrib.",
+            "title": "Contrib Callbacks"
+        },
+        {
+            "location": "/projects/dl/contrib/#contrib-layers",
+            "text": "Added a few layers to Keras Contrib :   SubPixelUpscaling  BatchRenormalization  GroupNormalization",
+            "title": "Contrib Layers"
+        },
+        {
+            "location": "/projects/dl/additional/",
+            "text": "Various Projects\n\u00b6\n\n\n\n\nNeural Image Assessment\n\u00b6\n\n\nImplementation of \nNIMA: Neural Image Assessment\n in Keras + Tensorflow with weights for MobileNet model trained on AVA dataset.\n\n\nNIMA assigns a Mean + Standard Deviation score to images, and can be used as a tool to automatically inspect quality of images or as a loss function to further improve the quality of generated images.\n\n\nContains weights trained on the AVA dataset for the following models:\n\n\n\n\nNASNet Mobile (0.067 EMD on valset thanks to @tfriedel !, 0.0848 EMD with just pre-training)\n\n\nInception ResNet v2 (~ 0.07 EMD on valset, thanks to @tfriedel !)\n\n\nMobileNet (0.0804 EMD on valset)\n\n\n\n\n\n\nGroup Normalization\n\u00b6\n\n\nA Keras implementation of \nGroup Normalization\n by Yuxin Wu and Kaiming He.\n\n\nUseful for fine-tuning of large models on smaller batch sizes than in research setting (where batch size is very large due to multiple GPUs). Similar to Batch Renormalization, but performs significantly better on ImageNet.\n\n\nAvailable in Keras Contrib inside normalization module.\n\n\n\n\nBatch Renormalization\n\u00b6\n\n\nBatch Renormalization algorithm implementation in Keras 2.0+. Original paper by Sergey Ioffe, \nBatch Renormalization: Towards Reducing Minibatch Dependence in Batch-Normalized Models\n.\n\n\nAvailable in Keras Contrib inside normalization module.\n\n\n\n\nSnapshot Ensembles\n\u00b6\n\n\nImplementation of the paper \nSnapshot Ensembles: Train 1, Get M for Free\n in Keras 2+\n\n\n\n\nTiramisu DenseNets for Semantic Segmentation\n\u00b6\n\n\nFully Connected DenseNet for Image Segmentation implementation of the paper \nThe One Hundred Layers Tiramisu : Fully Convolutional DenseNets for Semantic Segmentation\n\n\nAvailable in Keras Contrib inside the DenseNet applications module.\n\n\n\n\nOne Cycle Learning Policy\n\u00b6\n\n\nImplementation of One-Cycle Learning rate policy from the papers by Leslie N. Smith.\n\n\n\n\nA disciplined approach to neural network hyper-parameters: Part 1 -- learning rate, batch size, momentum, and weight decay\n\n\nSuper-Convergence: Very Fast Training of Residual Networks Using Large Learning Rates\n\n\n\n\nContains two Keras callbacks, LRFinder and OneCycleLR which are ported from the PyTorch Fast.ai library.\n\n\n\n\nNormalized Optimizers\n\u00b6\n\n\nKeras wrapper class for Normalized Gradient Descent from kmkolasinski/max-normed-optimizer, which can be applied to almost all Keras optimizers. Partially implements \nBlock-Normalized Gradient Method: An Empirical Study for Training Deep Neural Network\n for all base Keras optimizers, and allows flexibility to choose any normalizing function. It does not implement adaptive learning rates however.\n\n\nThe wrapper class can also be extended to allow Gradient Masking and Gradient Clipping using custom norm metrics.\n\n\nWrapper classes :\n\n\n\n\nNormalizedOptimizer: To normalize of gradient by the norm of that gradient.\n\n\nClippedOptimizer: To clip the gradient by the norm of that gradient. Note: Clips by Local Norm only !\n\n\n\n\n\n\nMobile Colorizer\n\u00b6\n\n\nUtilizes a U-Net inspired model conditioned on MobileNet class features to generate a mapping from Grayscale to Color image. Based on the work https://github.com/baldassarreFe/deep-koalarization\n\n\nUses MobileNets for memory efficiency in comparison to Inception-ResNet-V2 so that training can be done on a single GPU (of 4 GB size minimum).\n\n\n\n\nTensorflow Eager Execution Examples\n\u00b6\n\n\n\n\nTensorflow Eager Execution mode allows an imperative programming style, similar to Numpy in addition to nearly all of the Tensorflow graph APIs, higher level APIs to build models (Keras) as well as easy debugging with the Python debug bridge.\n\n\n\n\nSince Eager Execution APIs are quite recent, some kinks still exist, but as of this moment, they are minor and can be sidesteped. These issues are highlighted in the notebooks and it is advised to browse through the comments, even if the topic is easy, so as to understand the limitations of Eager as TF 1.8.\n\n\nThe following set of examples show usage of higher level APIs of Keras, different ways of performing the same thing, some issues that can arise and how to sidestep them while we wait for updates in Tensorflow to fix them.\n\n\nIt is to be noted, that I try to replicate most parts of this excellent PyTorch Tutorial Set. A few topics are missing - such as GANs and Image Captioning since I do not have the computational resources to train such models. A notable exception is Style Transfer, for which I have another repository dedicated to it, so I won't be porting it to Eager.\n\n\nA final note :\n\n\n\n\nEager is evolving rapidly, and almost all of these issues that I stated here are edge cases that can/will be resolved in a later update. I still appreciate Eager, even with its limitations, as it offers a rich set of APIs from its Tensorflow heritage in an imperative execution environment like PyTorch.\n\n\nThis means that once the Eager API has all of its kinks ironed out, it will result in cleaner, more concise code and hopefully at performance close to Tensorflow itself.\n\n\n\n\n\n\nTwitter Sentiment Analysis\n\u00b6\n\n\nTo perform sentiment analysis over a corpus of tweets during the U.S. 2012 Re-Election about the candidates Barack Obama and Mitt Romney.\n\n\nThe previous best score on the test dataset was 64 % f1-score, suggesting that improvements can be obtained using modern machine learning / deep learning algorithms.",
+            "title": "Additional Work"
+        },
+        {
+            "location": "/projects/dl/additional/#various-projects",
+            "text": "",
+            "title": "Various Projects"
+        },
+        {
+            "location": "/projects/dl/additional/#neural-image-assessment",
+            "text": "Implementation of  NIMA: Neural Image Assessment  in Keras + Tensorflow with weights for MobileNet model trained on AVA dataset.  NIMA assigns a Mean + Standard Deviation score to images, and can be used as a tool to automatically inspect quality of images or as a loss function to further improve the quality of generated images.  Contains weights trained on the AVA dataset for the following models:   NASNet Mobile (0.067 EMD on valset thanks to @tfriedel !, 0.0848 EMD with just pre-training)  Inception ResNet v2 (~ 0.07 EMD on valset, thanks to @tfriedel !)  MobileNet (0.0804 EMD on valset)",
+            "title": "Neural Image Assessment"
+        },
+        {
+            "location": "/projects/dl/additional/#group-normalization",
+            "text": "A Keras implementation of  Group Normalization  by Yuxin Wu and Kaiming He.  Useful for fine-tuning of large models on smaller batch sizes than in research setting (where batch size is very large due to multiple GPUs). Similar to Batch Renormalization, but performs significantly better on ImageNet.  Available in Keras Contrib inside normalization module.",
+            "title": "Group Normalization"
+        },
+        {
+            "location": "/projects/dl/additional/#batch-renormalization",
+            "text": "Batch Renormalization algorithm implementation in Keras 2.0+. Original paper by Sergey Ioffe,  Batch Renormalization: Towards Reducing Minibatch Dependence in Batch-Normalized Models .  Available in Keras Contrib inside normalization module.",
+            "title": "Batch Renormalization"
+        },
+        {
+            "location": "/projects/dl/additional/#snapshot-ensembles",
+            "text": "Implementation of the paper  Snapshot Ensembles: Train 1, Get M for Free  in Keras 2+",
+            "title": "Snapshot Ensembles"
+        },
+        {
+            "location": "/projects/dl/additional/#tiramisu-densenets-for-semantic-segmentation",
+            "text": "Fully Connected DenseNet for Image Segmentation implementation of the paper  The One Hundred Layers Tiramisu : Fully Convolutional DenseNets for Semantic Segmentation  Available in Keras Contrib inside the DenseNet applications module.",
+            "title": "Tiramisu DenseNets for Semantic Segmentation"
+        },
+        {
+            "location": "/projects/dl/additional/#one-cycle-learning-policy",
+            "text": "Implementation of One-Cycle Learning rate policy from the papers by Leslie N. Smith.   A disciplined approach to neural network hyper-parameters: Part 1 -- learning rate, batch size, momentum, and weight decay  Super-Convergence: Very Fast Training of Residual Networks Using Large Learning Rates   Contains two Keras callbacks, LRFinder and OneCycleLR which are ported from the PyTorch Fast.ai library.",
+            "title": "One Cycle Learning Policy"
+        },
+        {
+            "location": "/projects/dl/additional/#normalized-optimizers",
+            "text": "Keras wrapper class for Normalized Gradient Descent from kmkolasinski/max-normed-optimizer, which can be applied to almost all Keras optimizers. Partially implements  Block-Normalized Gradient Method: An Empirical Study for Training Deep Neural Network  for all base Keras optimizers, and allows flexibility to choose any normalizing function. It does not implement adaptive learning rates however.  The wrapper class can also be extended to allow Gradient Masking and Gradient Clipping using custom norm metrics.  Wrapper classes :   NormalizedOptimizer: To normalize of gradient by the norm of that gradient.  ClippedOptimizer: To clip the gradient by the norm of that gradient. Note: Clips by Local Norm only !",
+            "title": "Normalized Optimizers"
+        },
+        {
+            "location": "/projects/dl/additional/#mobile-colorizer",
+            "text": "Utilizes a U-Net inspired model conditioned on MobileNet class features to generate a mapping from Grayscale to Color image. Based on the work https://github.com/baldassarreFe/deep-koalarization  Uses MobileNets for memory efficiency in comparison to Inception-ResNet-V2 so that training can be done on a single GPU (of 4 GB size minimum).",
+            "title": "Mobile Colorizer"
+        },
+        {
+            "location": "/projects/dl/additional/#tensorflow-eager-execution-examples",
+            "text": "Tensorflow Eager Execution mode allows an imperative programming style, similar to Numpy in addition to nearly all of the Tensorflow graph APIs, higher level APIs to build models (Keras) as well as easy debugging with the Python debug bridge.   Since Eager Execution APIs are quite recent, some kinks still exist, but as of this moment, they are minor and can be sidesteped. These issues are highlighted in the notebooks and it is advised to browse through the comments, even if the topic is easy, so as to understand the limitations of Eager as TF 1.8.  The following set of examples show usage of higher level APIs of Keras, different ways of performing the same thing, some issues that can arise and how to sidestep them while we wait for updates in Tensorflow to fix them.  It is to be noted, that I try to replicate most parts of this excellent PyTorch Tutorial Set. A few topics are missing - such as GANs and Image Captioning since I do not have the computational resources to train such models. A notable exception is Style Transfer, for which I have another repository dedicated to it, so I won't be porting it to Eager.  A final note :   Eager is evolving rapidly, and almost all of these issues that I stated here are edge cases that can/will be resolved in a later update. I still appreciate Eager, even with its limitations, as it offers a rich set of APIs from its Tensorflow heritage in an imperative execution environment like PyTorch.  This means that once the Eager API has all of its kinks ironed out, it will result in cleaner, more concise code and hopefully at performance close to Tensorflow itself.",
+            "title": "Tensorflow Eager Execution Examples"
+        },
+        {
+            "location": "/projects/dl/additional/#twitter-sentiment-analysis",
+            "text": "To perform sentiment analysis over a corpus of tweets during the U.S. 2012 Re-Election about the candidates Barack Obama and Mitt Romney.  The previous best score on the test dataset was 64 % f1-score, suggesting that improvements can be obtained using modern machine learning / deep learning algorithms.",
+            "title": "Twitter Sentiment Analysis"
+        },
+        {
+            "location": "/projects/android/",
+            "text": "Android Projects\n\u00b6\n\n\n\n\nRagial Notifier\n\u00b6\n\n\nAndroid application that connects to \nRagial\n, the online\nbrowser to International Ragnarok Online's market place, and notifies the user of when marked items\nare being sold at a sale.\n\n\n\n\nRagial Searcher\n\u00b6\n\n\nThe java core library built to query and parse Ragial for details about products.",
+            "title": "Android"
+        },
+        {
+            "location": "/projects/android/#android-projects",
+            "text": "",
+            "title": "Android Projects"
+        },
+        {
+            "location": "/projects/android/#ragial-notifier",
+            "text": "Android application that connects to  Ragial , the online\nbrowser to International Ragnarok Online's market place, and notifies the user of when marked items\nare being sold at a sale.",
+            "title": "Ragial Notifier"
+        },
+        {
+            "location": "/projects/android/#ragial-searcher",
+            "text": "The java core library built to query and parse Ragial for details about products.",
+            "title": "Ragial Searcher"
+        }
+    ]
+}
