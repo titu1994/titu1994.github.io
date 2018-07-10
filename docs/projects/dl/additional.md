@@ -16,6 +16,16 @@ Contains weights trained on the AVA dataset for the following models:
 
 ----
 
+# [Switch Normalization](https://github.com/titu1994/keras-switchnorm)
+
+Switchable Normalization is a normalization technique that is able to learn different normalization operations for different normalization layers in a deep neural network in an end-to-end manner.
+
+Keras port of the implementation of the paper [Differentiable Learning-to-Normalize via Switchable Normalization](https://arxiv.org/abs/1806.10779).
+
+Code ported from the [switchnorm official repository](https://github.com/switchablenorms/Switchable-Normalization).
+
+----
+
 # [Group Normalization](https://github.com/titu1994/Keras-Group-Normalization)
 
 A Keras implementation of [Group Normalization](https://arxiv.org/abs/1803.08494) by Yuxin Wu and Kaiming He.
