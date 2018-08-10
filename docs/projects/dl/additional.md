@@ -2,6 +2,16 @@
 
 ----
 
+# [Neural Algorithmic Logic Units](https://github.com/titu1994/keras-neural-alu)
+
+A Keras implementation of Neural Arithmatic and Logical Unit from the paper [Neural Algorithmic Logic Units](https://arxiv.org/abs/1808.00508)
+by Andrew Trask, Felix Hill, Scott Reed, Jack Rae, Chris Dyer, Phil Blunsom.
+
+- Contains the layers for `Neural Arithmatic Logic Unit (NALU)` and `Neural Accumulator (NAC)`.
+- Also contains the results of the static function learning toy tests.
+
+----
+
 # [Neural Image Assessment](https://github.com/titu1994/neural-image-assessment)
 
 Implementation of [NIMA: Neural Image Assessment](https://arxiv.org/abs/1709.05424) in Keras + Tensorflow with weights for MobileNet model trained on AVA dataset.
