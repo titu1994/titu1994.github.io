@@ -425,6 +425,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#get_best_parameters" title="get_best_parameters" class="md-nav__link">
+    get_best_parameters
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#get_dataset" title="get_dataset" class="md-nav__link">
     get_dataset
   </a>
@@ -644,6 +651,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#get_best_parameters" title="get_best_parameters" class="md-nav__link">
+    get_best_parameters
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#get_dataset" title="get_dataset" class="md-nav__link">
     get_dataset
   </a>
@@ -805,6 +819,25 @@ to integer indices and continuous valued hyper paramters are left alone.</p>
 </ul>
 <p><strong>Returns:</strong></p>
 <p>A tuple of numpy arrays (np.ndarray, np.ndarray)</p>
+<hr />
+<h3 id="get_best_parameters">get_best_parameters<a class="headerlink" href="#get_best_parameters" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><span class="n">get_best_parameters</span><span class="p">(</span><span class="n">objective</span><span class="o">=</span><span class="s1">&#39;max&#39;</span><span class="p">)</span>
+</pre></div>
+
+<p>Selects the best hyper parameters according to the maximization
+or minimization of the objective value.</p>
+<p>Returns <code>None</code> if there are no samples in the dataset.</p>
+<p><strong>Arguments:</strong></p>
+<ul>
+<li><strong>objective</strong>: String label indicating whether to maximize or minimize
+    the objective value.</li>
+</ul>
+<p><strong>Raises:</strong></p>
+<ul>
+<li><strong>ValueError</strong>: If the objective is not <code>max</code> or <code>min</code>.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>A list of hyperparameter settings or <code>None</code> if the dataset is empty.</p>
 <hr />
 <h3 id="get_dataset">get_dataset<a class="headerlink" href="#get_dataset" title="Permanent link">&para;</a></h3>
 <div class="codehilite"><pre><span></span><span class="n">get_dataset</span><span class="p">()</span>

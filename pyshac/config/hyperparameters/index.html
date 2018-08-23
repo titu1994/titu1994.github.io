@@ -1338,6 +1338,16 @@ so that the model can properly be trained.</p>
 <div class="codehilite"><pre><span></span><span class="n">load_from_config</span><span class="p">(</span><span class="n">config</span><span class="p">)</span>
 </pre></div>
 
+<p>Utilizes the provided config to instantiate a new
+instance of the class with the same arguments.</p>
+<p><strong>Arguments:</strong></p>
+<ul>
+<li><strong>config (dict):</strong> A dictionary having keys as the argument names
+    and values as the values specified to the class using its
+    constructor.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>A new instance of this class with the correct arguments.</p>
 <hr />
 <h3 id="sample">sample<a class="headerlink" href="#sample" title="Permanent link">&para;</a></h3>
 <div class="codehilite"><pre><span></span><span class="n">sample</span><span class="p">()</span>
@@ -1351,7 +1361,7 @@ so that the model can properly be trained.</p>
 <p><strong>Returns:</strong></p>
 <p>a singular value sampled from possible values.</p>
 <hr />
-<p><span style="float:right;"><a href="https://github.com/titu1994/pyshac/blob/master/pyshac/config/hyperparameters.py#L231">[source]</a></span></p>
+<p><span style="float:right;"><a href="https://github.com/titu1994/pyshac/blob/master/pyshac/config/hyperparameters.py#L243">[source]</a></span></p>
 <h2 id="abstractcontinuoushyperparameter"><a href="#abstractcontinuoushyperparameter">AbstractContinuousHyperParameter</a><a class="headerlink" href="#abstractcontinuoushyperparameter" title="Permanent link">&para;</a></h2>
 <div class="codehilite"><pre><span></span><span class="n">pyshac</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">hyperparameters</span><span class="o">.</span><span class="n">AbstractContinuousHyperParameter</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">val1</span><span class="p">,</span> <span class="n">val2</span><span class="p">,</span> <span class="n">log_encode</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
 </pre></div>
@@ -1410,6 +1420,16 @@ the constructor, else returns its original value.</p>
 <div class="codehilite"><pre><span></span><span class="n">load_from_config</span><span class="p">(</span><span class="n">config</span><span class="p">)</span>
 </pre></div>
 
+<p>Utilizes the provided config to instantiate a new
+instance of the class with the same arguments.</p>
+<p><strong>Arguments:</strong></p>
+<ul>
+<li><strong>config (dict):</strong> A dictionary having keys as the argument names
+    and values as the values specified to the class using its
+    constructor.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>A new instance of this class with the correct arguments.</p>
 <hr />
 <h3 id="sample_1">sample<a class="headerlink" href="#sample_1" title="Permanent link">&para;</a></h3>
 <div class="codehilite"><pre><span></span><span class="n">sample</span><span class="p">()</span>
@@ -1419,7 +1439,7 @@ the constructor, else returns its original value.</p>
 <p><strong>Returns:</strong></p>
 <p>a float value.</p>
 <hr />
-<p><span style="float:right;"><a href="https://github.com/titu1994/pyshac/blob/master/pyshac/config/hyperparameters.py#L141">[source]</a></span></p>
+<p><span style="float:right;"><a href="https://github.com/titu1994/pyshac/blob/master/pyshac/config/hyperparameters.py#L153">[source]</a></span></p>
 <h2 id="discretehyperparameter"><a href="#discretehyperparameter">DiscreteHyperParameter</a><a class="headerlink" href="#discretehyperparameter" title="Permanent link">&para;</a></h2>
 <div class="codehilite"><pre><span></span><span class="n">pyshac</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">hyperparameters</span><span class="o">.</span><span class="n">DiscreteHyperParameter</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">values</span><span class="p">)</span>
 </pre></div>
@@ -1478,6 +1498,16 @@ the constructor, else returns its original value.</p>
 <div class="codehilite"><pre><span></span><span class="n">load_from_config</span><span class="p">(</span><span class="n">config</span><span class="p">)</span>
 </pre></div>
 
+<p>Utilizes the provided config to instantiate a new
+instance of the class with the same arguments.</p>
+<p><strong>Arguments:</strong></p>
+<ul>
+<li><strong>config (dict):</strong> A dictionary having keys as the argument names
+    and values as the values specified to the class using its
+    constructor.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>A new instance of this class with the correct arguments.</p>
 <hr />
 <h3 id="sample_2">sample<a class="headerlink" href="#sample_2" title="Permanent link">&para;</a></h3>
 <div class="codehilite"><pre><span></span><span class="n">sample</span><span class="p">()</span>
@@ -1487,7 +1517,7 @@ the constructor, else returns its original value.</p>
 <p><strong>Returns:</strong></p>
 <p>a single value from its list of possible values.</p>
 <hr />
-<p><span style="float:right;"><a href="https://github.com/titu1994/pyshac/blob/master/pyshac/config/hyperparameters.py#L335">[source]</a></span></p>
+<p><span style="float:right;"><a href="https://github.com/titu1994/pyshac/blob/master/pyshac/config/hyperparameters.py#L347">[source]</a></span></p>
 <h2 id="uniformcontinuoushyperparameter"><a href="#uniformcontinuoushyperparameter">UniformContinuousHyperParameter</a><a class="headerlink" href="#uniformcontinuoushyperparameter" title="Permanent link">&para;</a></h2>
 <div class="codehilite"><pre><span></span><span class="n">pyshac</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">hyperparameters</span><span class="o">.</span><span class="n">UniformContinuousHyperParameter</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">min_value</span><span class="p">,</span> <span class="n">max_value</span><span class="p">,</span> <span class="n">log_encode</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
 </pre></div>
@@ -1544,6 +1574,16 @@ the constructor, else returns its original value.</p>
 <div class="codehilite"><pre><span></span><span class="n">load_from_config</span><span class="p">(</span><span class="n">config</span><span class="p">)</span>
 </pre></div>
 
+<p>Utilizes the provided config to instantiate a new
+instance of the class with the same arguments.</p>
+<p><strong>Arguments:</strong></p>
+<ul>
+<li><strong>config (dict):</strong> A dictionary having keys as the argument names
+    and values as the values specified to the class using its
+    constructor.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>A new instance of this class with the correct arguments.</p>
 <hr />
 <h3 id="sample_3">sample<a class="headerlink" href="#sample_3" title="Permanent link">&para;</a></h3>
 <div class="codehilite"><pre><span></span><span class="n">sample</span><span class="p">()</span>
@@ -1553,7 +1593,7 @@ the constructor, else returns its original value.</p>
 <p><strong>Returns:</strong></p>
 <p>float.</p>
 <hr />
-<p><span style="float:right;"><a href="https://github.com/titu1994/pyshac/blob/master/pyshac/config/hyperparameters.py#L388">[source]</a></span></p>
+<p><span style="float:right;"><a href="https://github.com/titu1994/pyshac/blob/master/pyshac/config/hyperparameters.py#L400">[source]</a></span></p>
 <h2 id="normalcontinuoushyperparameter"><a href="#normalcontinuoushyperparameter">NormalContinuousHyperParameter</a><a class="headerlink" href="#normalcontinuoushyperparameter" title="Permanent link">&para;</a></h2>
 <div class="codehilite"><pre><span></span><span class="n">pyshac</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">hyperparameters</span><span class="o">.</span><span class="n">NormalContinuousHyperParameter</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">mean</span><span class="p">,</span> <span class="n">std</span><span class="p">)</span>
 </pre></div>
@@ -1606,6 +1646,16 @@ the constructor, else returns its original value.</p>
 <div class="codehilite"><pre><span></span><span class="n">load_from_config</span><span class="p">(</span><span class="n">config</span><span class="p">)</span>
 </pre></div>
 
+<p>Utilizes the provided config to instantiate a new
+instance of the class with the same arguments.</p>
+<p><strong>Arguments:</strong></p>
+<ul>
+<li><strong>config (dict):</strong> A dictionary having keys as the argument names
+    and values as the values specified to the class using its
+    constructor.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>A new instance of this class with the correct arguments.</p>
 <hr />
 <h3 id="sample_4">sample<a class="headerlink" href="#sample_4" title="Permanent link">&para;</a></h3>
 <div class="codehilite"><pre><span></span><span class="n">sample</span><span class="p">()</span>
@@ -1616,7 +1666,7 @@ as specified in the constructor.</p>
 <p><strong>Returns:</strong></p>
 <p>float.</p>
 <hr />
-<p><span style="float:right;"><a href="https://github.com/titu1994/pyshac/blob/master/pyshac/config/hyperparameters.py#L436">[source]</a></span></p>
+<p><span style="float:right;"><a href="https://github.com/titu1994/pyshac/blob/master/pyshac/config/hyperparameters.py#L448">[source]</a></span></p>
 <h2 id="hyperparameterlist"><a href="#hyperparameterlist">HyperParameterList</a><a class="headerlink" href="#hyperparameterlist" title="Permanent link">&para;</a></h2>
 <div class="codehilite"><pre><span></span><span class="n">pyshac</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">hyperparameters</span><span class="o">.</span><span class="n">HyperParameterList</span><span class="p">(</span><span class="n">hyper_parameter_list</span><span class="o">=</span><span class="bp">None</span><span class="p">)</span>
 </pre></div>

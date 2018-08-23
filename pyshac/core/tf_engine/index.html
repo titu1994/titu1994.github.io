@@ -688,9 +688,9 @@ such that the provided session can be used to evaluate all ops inside the evalua
 <p>If parallel evaluation is not preferred, please refer the <a href="../../serial-execution/">Serial Evaluation</a> page.</p>
 <h2 id="class-information">Class Information<a class="headerlink" href="#class-information" title="Permanent link">&para;</a></h2>
 <hr />
-<p><span style="float:right;"><a href="https://github.com/titu1994/pyshac/blob/master/pyshac/core/managed/tf_engine.py#L7">[source]</a></span></p>
+<p><span style="float:right;"><a href="https://github.com/titu1994/pyshac/blob/master/pyshac/core/managed/tf_engine.py#L5">[source]</a></span></p>
 <h2 id="tensorflowshac"><a href="#tensorflowshac">TensorflowSHAC</a><a class="headerlink" href="#tensorflowshac" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span><span class="n">pyshac</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">managed</span><span class="o">.</span><span class="n">tf_engine</span><span class="o">.</span><span class="n">TensorflowSHAC</span><span class="p">(</span><span class="n">evaluation_function</span><span class="p">,</span> <span class="n">hyperparameter_list</span><span class="p">,</span> <span class="n">total_budget</span><span class="p">,</span> <span class="n">num_batches</span><span class="p">,</span> <span class="n">max_gpu_evaluators</span><span class="p">,</span> <span class="n">objective</span><span class="o">=</span><span class="s1">&#39;max&#39;</span><span class="p">,</span> <span class="n">max_classifiers</span><span class="o">=</span><span class="mi">18</span><span class="p">,</span> <span class="n">max_cpu_evaluators</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<div class="codehilite"><pre><span></span><span class="n">pyshac</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">managed</span><span class="o">.</span><span class="n">tf_engine</span><span class="o">.</span><span class="n">TensorflowSHAC</span><span class="p">(</span><span class="n">hyperparameter_list</span><span class="p">,</span> <span class="n">total_budget</span><span class="p">,</span> <span class="n">num_batches</span><span class="p">,</span> <span class="n">max_gpu_evaluators</span><span class="p">,</span> <span class="n">objective</span><span class="o">=</span><span class="s1">&#39;max&#39;</span><span class="p">,</span> <span class="n">max_classifiers</span><span class="o">=</span><span class="mi">18</span><span class="p">,</span> <span class="n">max_cpu_evaluators</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 </pre></div>
 
 <p>SHAC Engine specifically built for the Graph based workflow of Tensorflow.</p>
@@ -706,10 +706,6 @@ there is no additional work required by the user inside the evaluation function.
 as memory management is done by Tensorflow automatically in such a scenario.</p>
 <p><strong>Arguments:</strong></p>
 <ul>
-<li><strong>evaluation_function ((tf.Session, int, list) -&gt; float):</strong> The evaluation function is
-    passed a managed Tensorflow Session, the integer id (of the worker) and the
-    sampled hyper parameters in an OrderedDict. The evaluation function is expected
-    to pass a python floating point number representing the evaluated value.</li>
 <li><strong>hyperparameter_list (hp.HyperParameterList | None):</strong> A list of parameters
     (or a HyperParameterList) that are passed to define the search space.
     Can be None, so that it is loaded from disk instead.</li>
@@ -740,7 +736,7 @@ as memory management is done by Tensorflow automatically in such a scenario.</p>
 <hr />
 <h2 id="tensorflowshac-methods">TensorflowSHAC methods<a class="headerlink" href="#tensorflowshac-methods" title="Permanent link">&para;</a></h2>
 <h3 id="fit">fit<a class="headerlink" href="#fit" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><span class="n">fit</span><span class="p">(</span><span class="n">skip_cv_checks</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">early_stop</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">relax_checks</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+<div class="codehilite"><pre><span></span><span class="n">fit</span><span class="p">(</span><span class="n">eval_fn</span><span class="p">,</span> <span class="n">skip_cv_checks</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">early_stop</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">relax_checks</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
 </pre></div>
 
 <p>Generated batches of samples, trains <code>total_classifiers</code> number of XGBoost models
@@ -749,12 +745,12 @@ and evaluates each batch with the supplied function in parallel.</p>
 or to evaluate them. While the defaults generally work well, further performance
 gains can be had by trying different values according to the limits of the system.</p>
 <div class="codehilite"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="nb">eval</span> <span class="o">=</span> <span class="k">lambda</span> <span class="nb">id</span><span class="p">,</span> <span class="n">params</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">params</span><span class="p">[</span><span class="s1">&#39;x&#39;</span><span class="p">])</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">shac</span> <span class="o">=</span> <span class="n">SHAC</span><span class="p">(</span><span class="nb">eval</span><span class="p">,</span> <span class="n">params</span><span class="p">,</span> <span class="n">total_budget</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">num_batches</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">shac</span> <span class="o">=</span> <span class="n">TensorflowSHAC</span><span class="p">(</span><span class="n">params</span><span class="p">,</span> <span class="n">total_budget</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">num_batches</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
 
-<span class="o">&gt;&gt;&gt;</span> <span class="n">shac</span><span class="o">.</span><span class="n">num_parallel_generators</span> <span class="o">=</span> <span class="mi">20</span>  <span class="c1"># change the number of generator process</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">shac</span><span class="o">.</span><span class="n">num_parallel_evaluators</span> <span class="o">=</span> <span class="mi">1</span>  <span class="c1"># change the number of evaluator processes</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">shac</span><span class="o">.</span><span class="n">generator_backend</span> <span class="o">=</span> <span class="s1">&#39;multiprocessing&#39;</span>  <span class="c1"># change the backend for the generator</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">shac</span><span class="o">.</span><span class="n">evaluator_backend</span> <span class="o">=</span> <span class="s1">&#39;threading&#39;</span>  <span class="c1"># change the backend of the evaluator</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">shac</span><span class="o">.</span><span class="n">set_num_parallel_generators</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>  <span class="c1"># change the number of generator process</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">shac</span><span class="o">.</span><span class="n">set_num_parallel_evaluators</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>  <span class="c1"># change the number of evaluator processes</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">shac</span><span class="o">.</span><span class="n">generator_backend</span> <span class="o">=</span> <span class="s1">&#39;multiprocessing&#39;</span>  <span class="c1"># change the backend for the generator (default is `multiprocessing`)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">shac</span><span class="o">.</span><span class="n">concurrent_evaluators</span><span class="p">()</span>  <span class="c1"># change the backend of the evaluator to use `threading`</span>
 </pre></div>
 
 <p>Has an adaptive behaviour based on what epoch it is on, since later epochs require
@@ -765,6 +761,10 @@ number increases beyond 10, it doubles the number of generator processes.</p>
 </pre></div></p>
 <p><strong>Arguments:</strong></p>
 <ul>
+<li><strong>evaluation_function ((tf.Session, int, list) -&gt; float):</strong> The evaluation function is
+passed a managed Tensorflow Session, the integer id (of the worker) and the
+sampled hyper parameters in an OrderedDict. The evaluation function is expected
+to pass a python floating point number representing the evaluated value.</li>
 <li><strong>skip_cv_checks (bool):</strong> If set, will not perform 5 fold cross validation check
     on the models before adding them to the classifer list. Useful when the
     batch size is small.</li>
@@ -777,17 +777,26 @@ number increases beyond 10, it doubles the number of generator processes.</p>
 </ul>
 <hr />
 <h3 id="predict">predict<a class="headerlink" href="#predict" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><span class="n">predict</span><span class="p">(</span><span class="n">num_batches</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">num_workers_per_batch</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">relax_checks</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">max_classfiers</span><span class="o">=</span><span class="bp">None</span><span class="p">)</span>
+<div class="codehilite"><pre><span></span><span class="n">predict</span><span class="p">(</span><span class="n">num_samples</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">num_batches</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">num_workers_per_batch</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">relax_checks</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">max_classfiers</span><span class="o">=</span><span class="bp">None</span><span class="p">)</span>
 </pre></div>
 
 <p>Using trained classifiers, sample the search space and predict which samples
 can successfully pass through the cascade of classifiers.</p>
 <p>When using a full cascade of 18 classifiers, a vast amount of time to sample
-a single batch. It is recommended to save the model (done automatically during
-training), restore a model with a smaller batch size and then use predict.</p>
+a single sample.</p>
+<div class="admonition note">
+<p class="admonition-title">Sample mode vs Batch mode</p>
+</div>
+<p>Parameters can be generated in either sample mode or batch mode or any combination
+of the two.</p>
+<p><code>num_samples</code> is on a per sample basis (1 sample generated per count). Can be <code>None</code> or an int &gt;= 0.
+<code>num_batches</code> is on a per batch basis (M samples generated per count). Can be <code>None</code> or an integer &gt;= 0.</p>
+<p>The two are combined to produce a total number of samples which are provided in a
+list.</p>
 <p><strong>Arguments:</strong></p>
 <ul>
-<li><strong>num_batches (int):</strong> Number of batches, each of <code>num_batches</code> to be generated</li>
+<li><strong>num_samples (None | int):</strong> Number of samples to be generated.</li>
+<li><strong>num_batches (None | int):</strong> Number of batches of samples to be generated.</li>
 <li><strong>num_workers_per_batch (int):</strong> Determines how many parallel threads / processes
     are created to generate the batches. For small batches, it is best to use 1.
     If left as <code>None</code>, defaults to <code>num_parallel_generators</code>.</li>
@@ -847,7 +856,7 @@ and sets the max parallel generators to be the number of cores.</p>
 <div class="codehilite"><pre><span></span><span class="n">parallel_evaluators</span><span class="p">()</span>
 </pre></div>
 
-<p>Sets the evaluators to use the multiprocessing backend.</p>
+<p>Sets the evaluators to use the <code>loky</code> backend.</p>
 <p>The user must take the responsibility of thread safety and memory management.</p>
 <hr />
 <h3 id="concurrent_evaluators">concurrent_evaluators<a class="headerlink" href="#concurrent_evaluators" title="Permanent link">&para;</a></h3>
