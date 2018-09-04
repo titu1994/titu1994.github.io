@@ -12,6 +12,14 @@ by Andrew Trask, Felix Hill, Scott Reed, Jack Rae, Chris Dyer, Phil Blunsom.
 
 ----
 
+# [Padam - Partially Adaptive Momentum Estimation](https://github.com/titu1994/keras-padam)
+
+Keras implementation of Padam from [Closing the Generalization Gap of Adaptive Gradient Methods in Training Deep Neural Networks](https://arxiv.org/abs/1806.06763).
+
+Padam allows for much larger learning rates to be utilized, and follows generalization closely with Stochastc Gradient Descent.
+
+----
+
 # [Neural Image Assessment](https://github.com/titu1994/neural-image-assessment)
 
 Implementation of [NIMA: Neural Image Assessment](https://arxiv.org/abs/1709.05424) in Keras + Tensorflow with weights for MobileNet model trained on AVA dataset.
