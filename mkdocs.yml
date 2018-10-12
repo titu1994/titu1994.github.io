@@ -25,9 +25,6 @@ extra:
 
 
 dev_addr: '0.0.0.0:8000'
-google_analytics:
-  - 'UA-47921241-1'
-  - 'auto'
 
 markdown_extensions:
   - admonition

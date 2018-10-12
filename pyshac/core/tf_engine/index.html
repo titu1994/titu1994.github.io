@@ -314,15 +314,27 @@
       
 
 
+  <li class="md-nav__item">
+    <a href="../../external-dataset-training/" title="External Dataset Training" class="md-nav__link">
+      External Dataset Training
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
     
-    <label class="md-nav__link" for="nav-7">
+    <label class="md-nav__link" for="nav-8">
       Config
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-7">
+      <label class="md-nav__title" for="nav-8">
         Config
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -366,13 +378,13 @@
 
   <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9" checked>
     
-    <label class="md-nav__link" for="nav-8">
+    <label class="md-nav__link" for="nav-9">
       Core
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-8">
+      <label class="md-nav__title" for="nav-9">
         Core
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -464,6 +476,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#fit_dataset" title="fit_dataset" class="md-nav__link">
+    fit_dataset
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#predict" title="predict" class="md-nav__link">
     predict
   </a>
@@ -545,6 +564,42 @@
   </li>
 
     
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10" type="checkbox" id="nav-10">
+    
+    <label class="md-nav__link" for="nav-10">
+      Utils
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-10">
+        Utils
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../utils/vis_utils/" title="Visualization" class="md-nav__link">
+      Visualization
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
   </ul>
 </nav>
                   </div>
@@ -590,6 +645,13 @@
           <li class="md-nav__item">
   <a href="#fit" title="fit" class="md-nav__link">
     fit
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fit_dataset" title="fit_dataset" class="md-nav__link">
+    fit_dataset
   </a>
   
 </li>
@@ -776,6 +838,56 @@ to pass a python floating point number representing the evaluated value.</li>
     to pass through all checks.</li>
 </ul>
 <hr />
+<h3 id="fit_dataset">fit_dataset<a class="headerlink" href="#fit_dataset" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><span class="n">fit_dataset</span><span class="p">(</span><span class="n">dataset_path</span><span class="p">,</span> <span class="n">skip_cv_checks</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">early_stop</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">presort</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+</pre></div>
+
+<p>Uses the provided dataset file to train the engine, instead of using
+the sequentual halving and classification algorithm directly. The data
+provided in the path must strictly follow the format of the dataset
+maintained by the engine.</p>
+<p><strong>Standard format of datasets:</strong></p>
+<p>Each dataset csv file must contain an integer id column named "id"
+as its 1<sup>st</sup> column, followed by several columns describing the values
+taken by the hyper parameters, and the final column must be for
+the the objective criterion, and <em>must</em> be named "scores".</p>
+<p>The csv file <em>must</em> contain a header, following the above format.</p>
+<p><strong>Example:</strong></p>
+<div class="codehilite"><pre><span></span>id,hp1,hp2,scores
+0,1,h1,1.0
+1,1,h2,0.2
+2,0,h1,0.0
+3,0,h3,0.5
+...
+</pre></div>
+
+
+<p><strong>Arguments:</strong></p>
+<ul>
+<li><strong>dataset_path (str):</strong> The full or relative path to a csv file
+    containing the values of the dataset.</li>
+<li><strong>skip_cv_checks (bool):</strong> If set, will not perform 5 fold cross
+    validation check on the models before adding them to the
+    classifer list. Useful when the batch size is small.</li>
+<li><strong>early_stop (bool):</strong> Stop running if fail to find a classifier
+    that beats the last stage of evaluations.</li>
+<li><strong>presort (bool):</strong> Boolean flag to determine whether to sort
+    the values of the dataset prior to loading. Ascending or
+    descending sort is selected based on whether the engine
+    is maximizing or minimizing the objective. It is preferable
+    to set this always, to train better classifiers.</li>
+</ul>
+<p><strong>Raises:</strong></p>
+<ul>
+<li><strong>ValueError</strong>: If the number of hyper parameters in the file
+    are not the same as the number of hyper parameters
+    that are available to the engine or if the number of
+    samples in the provided dataset are less than the
+    required number of samples by the engine.</li>
+<li><strong>FileNotFoundError</strong>: If the dataset is not available at the
+    provided filepath.</li>
+</ul>
+<hr />
 <h3 id="predict">predict<a class="headerlink" href="#predict" title="Permanent link">&para;</a></h3>
 <div class="codehilite"><pre><span></span><span class="n">predict</span><span class="p">(</span><span class="n">num_samples</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">num_batches</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">num_workers_per_batch</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">relax_checks</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">max_classfiers</span><span class="o">=</span><span class="bp">None</span><span class="p">)</span>
 </pre></div>
@@ -944,8 +1056,6 @@ rather than parallel execution of the evaluators.</p>
       
     
     
-      
-        <script>!function(e,a,t,n,o,c,i){e.GoogleAnalyticsObject=o,e.ga=e.ga||function(){(e.ga.q=e.ga.q||[]).push(arguments)},e.ga.l=1*new Date,c=a.createElement(t),i=a.getElementsByTagName(t)[0],c.async=1,c.src="https://www.google-analytics.com/analytics.js",i.parentNode.insertBefore(c,i)}(window,document,"script",0,"ga"),ga("create","UA-47921241-1","auto"),ga("set","anonymizeIp",!0),ga("send","pageview");var links=document.getElementsByTagName("a");if(Array.prototype.map.call(links,function(e){e.host!=document.location.host&&e.addEventListener("click",function(){var a=e.getAttribute("data-md-action")||"follow";ga("send","event","outbound",a,e.href)})}),document.forms.search){var query=document.forms.search.query;query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})}</script>
       
     
   </body>
