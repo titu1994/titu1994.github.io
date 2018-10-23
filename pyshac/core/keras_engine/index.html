@@ -364,6 +364,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../config/callbacks/" title="Callbacks" class="md-nav__link">
+      Callbacks
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -801,7 +813,7 @@ a scenario.</p>
 <hr />
 <h2 id="kerasshac-methods">KerasSHAC methods<a class="headerlink" href="#kerasshac-methods" title="Permanent link">&para;</a></h2>
 <h3 id="fit">fit<a class="headerlink" href="#fit" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><span class="n">fit</span><span class="p">(</span><span class="n">eval_fn</span><span class="p">,</span> <span class="n">skip_cv_checks</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">early_stop</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">relax_checks</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+<div class="codehilite"><pre><span></span><span class="n">fit</span><span class="p">(</span><span class="n">eval_fn</span><span class="p">,</span> <span class="n">skip_cv_checks</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">early_stop</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">relax_checks</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">callbacks</span><span class="o">=</span><span class="bp">None</span><span class="p">)</span>
 </pre></div>
 
 <p>Generated batches of samples, trains <code>total_classifiers</code> number of XGBoost models
@@ -839,10 +851,17 @@ number increases beyond 10, it doubles the number of generator processes.</p>
     checks from all classifiers. Can be useful when large number of models
     are present and remaining search space is not big enough to allow sample
     to pass through all checks.</li>
+<li><strong>callbacks (list | None):</strong> Optional list of callbacks that are executed when
+    the engine is being trained. <code>History</code> callback is automatically added
+    for all calls to <code>fit</code>.</li>
 </ul>
+<p><strong>Returns:</strong></p>
+<p>A <code>History</code> object which tracks all the important information
+during training, and can be accessed using <code>history.history</code>
+as a dictionary.</p>
 <hr />
 <h3 id="fit_dataset">fit_dataset<a class="headerlink" href="#fit_dataset" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><span class="n">fit_dataset</span><span class="p">(</span><span class="n">dataset_path</span><span class="p">,</span> <span class="n">skip_cv_checks</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">early_stop</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">presort</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+<div class="codehilite"><pre><span></span><span class="n">fit_dataset</span><span class="p">(</span><span class="n">dataset_path</span><span class="p">,</span> <span class="n">skip_cv_checks</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">early_stop</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">presort</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">callbacks</span><span class="o">=</span><span class="bp">None</span><span class="p">)</span>
 </pre></div>
 
 <p>Uses the provided dataset file to train the engine, instead of using
@@ -879,6 +898,9 @@ the the objective criterion, and <em>must</em> be named "scores".</p>
     descending sort is selected based on whether the engine
     is maximizing or minimizing the objective. It is preferable
     to set this always, to train better classifiers.</li>
+<li><strong>callbacks (list | None):</strong> Optional list of callbacks that are executed when
+    the engine is being trained. <code>History</code> callback is automatically added
+    for all calls to <code>fit_dataset</code>.</li>
 </ul>
 <p><strong>Raises:</strong></p>
 <ul>
@@ -890,6 +912,10 @@ the the objective criterion, and <em>must</em> be named "scores".</p>
 <li><strong>FileNotFoundError</strong>: If the dataset is not available at the
     provided filepath.</li>
 </ul>
+<p><strong>Returns:</strong></p>
+<p>A <code>History</code> object which tracks all the important information
+during training, and can be accessed using <code>history.history</code>
+as a dictionary.</p>
 <hr />
 <h3 id="predict">predict<a class="headerlink" href="#predict" title="Permanent link">&para;</a></h3>
 <div class="codehilite"><pre><span></span><span class="n">predict</span><span class="p">(</span><span class="n">num_samples</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">num_batches</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">num_workers_per_batch</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">relax_checks</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">max_classfiers</span><span class="o">=</span><span class="bp">None</span><span class="p">)</span>
