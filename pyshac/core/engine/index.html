@@ -326,15 +326,27 @@
       
 
 
+  <li class="md-nav__item">
+    <a href="../../callbacks/" title="Callbacks" class="md-nav__link">
+      Callbacks
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9">
     
-    <label class="md-nav__link" for="nav-8">
+    <label class="md-nav__link" for="nav-9">
       Config
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-8">
+      <label class="md-nav__title" for="nav-9">
         Config
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -390,13 +402,13 @@
 
   <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10" type="checkbox" id="nav-10" checked>
     
-    <label class="md-nav__link" for="nav-9">
+    <label class="md-nav__link" for="nav-10">
       Core
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-9">
+      <label class="md-nav__title" for="nav-10">
         Core
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -590,13 +602,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10" type="checkbox" id="nav-10">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-11" type="checkbox" id="nav-11">
     
-    <label class="md-nav__link" for="nav-10">
+    <label class="md-nav__link" for="nav-11">
       Utils
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-10">
+      <label class="md-nav__title" for="nav-11">
         Utils
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -780,9 +792,9 @@ at significant cost of execution, as a new Tensorflow Graph and likewise, a new 
 </div>
 <h2 id="class-information">Class Information<a class="headerlink" href="#class-information" title="Permanent link">&para;</a></h2>
 <hr />
-<p><span style="float:right;"><a href="https://github.com/titu1994/pyshac/blob/master/pyshac/core/engine.py#L1044">[source]</a></span></p>
+<p><span style="float:right;"><a href="https://github.com/titu1994/pyshac/blob/master/pyshac/core/engine.py#L1062">[source]</a></span></p>
 <h2 id="shac"><a href="#shac">SHAC</a><a class="headerlink" href="#shac" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span><span class="n">pyshac</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">engine</span><span class="o">.</span><span class="n">SHAC</span><span class="p">(</span><span class="n">hyperparameter_list</span><span class="p">,</span> <span class="n">total_budget</span><span class="p">,</span> <span class="n">num_batches</span><span class="p">,</span> <span class="n">objective</span><span class="o">=</span><span class="s1">&#39;max&#39;</span><span class="p">,</span> <span class="n">max_classifiers</span><span class="o">=</span><span class="mi">18</span><span class="p">)</span>
+<div class="codehilite"><pre><span></span><span class="n">pyshac</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">engine</span><span class="o">.</span><span class="n">SHAC</span><span class="p">(</span><span class="n">hyperparameter_list</span><span class="p">,</span> <span class="n">total_budget</span><span class="p">,</span> <span class="n">num_batches</span><span class="p">,</span> <span class="n">objective</span><span class="o">=</span><span class="s1">&#39;max&#39;</span><span class="p">,</span> <span class="n">max_classifiers</span><span class="o">=</span><span class="mi">18</span><span class="p">,</span> <span class="n">save_dir</span><span class="o">=</span><span class="s1">&#39;shac&#39;</span><span class="p">)</span>
 </pre></div>
 
 <p>The default and generic implementation of the SHAC algorithm. It is a wrapper over the
@@ -812,6 +824,8 @@ so as not to exhaust all CPU / GPU memory during execution.</p>
     the evaluation measure or minimize it.</li>
 <li><strong>max_classifiers (int):</strong> Maximum number of classifiers that
     are trained. Default (18) is according to the paper.</li>
+<li><strong>save_dir (str):</strong> The base directory where the data of the engine
+    will be stored.</li>
 </ul>
 <p><strong>References:</strong></p>
 <ul>

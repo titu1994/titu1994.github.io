@@ -100,7 +100,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#callback" tabindex="1" class="md-skip">
+      <a href="#callbacks" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -325,18 +325,30 @@
       
       
 
+
+  <li class="md-nav__item">
+    <a href="../../callbacks/" title="Callbacks" class="md-nav__link">
+      Callbacks
+    </a>
+  </li>
+
+    
+      
+      
+      
+
   
 
 
   <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9" checked>
     
-    <label class="md-nav__link" for="nav-8">
+    <label class="md-nav__link" for="nav-9">
       Config
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-8">
+      <label class="md-nav__title" for="nav-9">
         Config
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -377,6 +389,8 @@
     
     <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     
+      
+    
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
         Callbacks
@@ -390,9 +404,18 @@
 <nav class="md-nav md-nav--secondary">
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">Table of contents</label>
     <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#class-information" title="Class Information" class="md-nav__link">
+    Class Information
+  </a>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#callback" title="Callback" class="md-nav__link">
@@ -514,13 +537,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10" type="checkbox" id="nav-10">
     
-    <label class="md-nav__link" for="nav-9">
+    <label class="md-nav__link" for="nav-10">
       Core
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-9">
+      <label class="md-nav__title" for="nav-10">
         Core
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -586,13 +609,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10" type="checkbox" id="nav-10">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-11" type="checkbox" id="nav-11">
     
-    <label class="md-nav__link" for="nav-10">
+    <label class="md-nav__link" for="nav-11">
       Utils
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-10">
+      <label class="md-nav__title" for="nav-11">
         Utils
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -629,9 +652,18 @@
 <nav class="md-nav md-nav--secondary">
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">Table of contents</label>
     <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#class-information" title="Class Information" class="md-nav__link">
+    Class Information
+  </a>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#callback" title="Callback" class="md-nav__link">
@@ -749,9 +781,15 @@
                   <a href="https://github.com/titu1994/pyshac/edit/master/docs/config/callbacks.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                  <h1>Callbacks</h1>
-                
-                <p><span style="float:right;"><a href="https://github.com/titu1994/pyshac/blob/master/pyshac/config/callbacks.py#L38">[source]</a></span></p>
+                <h1 id="callbacks">Callbacks<a class="headerlink" href="#callbacks" title="Permanent link">&para;</a></h1>
+<hr />
+<p>Callbacks can be used with PySHAC for custom code execution, such as monitoring the improvement of the engine,
+maintaining a history of the training session or simply writing the logs to files.</p>
+<p>Callbacks allow you the flexibility to prepare your state prior to training or evaluation, and in doing so can
+allow one to perform stateful evaluation if necessary using concurrent evaluators.</p>
+<h2 id="class-information">Class Information<a class="headerlink" href="#class-information" title="Permanent link">&para;</a></h2>
+<hr />
+<p><span style="float:right;"><a href="https://github.com/titu1994/pyshac/blob/master/pyshac/config/callbacks.py#L38">[source]</a></span></p>
 <h2 id="callback"><a href="#callback">Callback</a><a class="headerlink" href="#callback" title="Permanent link">&para;</a></h2>
 <div class="codehilite"><pre><span></span><span class="n">pyshac</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">callbacks</span><span class="o">.</span><span class="n">Callback</span><span class="p">()</span>
 </pre></div>

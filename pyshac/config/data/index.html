@@ -325,18 +325,30 @@
       
       
 
+
+  <li class="md-nav__item">
+    <a href="../../callbacks/" title="Callbacks" class="md-nav__link">
+      Callbacks
+    </a>
+  </li>
+
+    
+      
+      
+      
+
   
 
 
   <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9" checked>
     
-    <label class="md-nav__link" for="nav-8">
+    <label class="md-nav__link" for="nav-9">
       Config
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-8">
+      <label class="md-nav__title" for="nav-9">
         Config
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -539,13 +551,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10" type="checkbox" id="nav-10">
     
-    <label class="md-nav__link" for="nav-9">
+    <label class="md-nav__link" for="nav-10">
       Core
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-9">
+      <label class="md-nav__title" for="nav-10">
         Core
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -611,13 +623,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10" type="checkbox" id="nav-10">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-11" type="checkbox" id="nav-11">
     
-    <label class="md-nav__link" for="nav-10">
+    <label class="md-nav__link" for="nav-11">
       Utils
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-10">
+      <label class="md-nav__title" for="nav-11">
         Utils
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -808,7 +820,7 @@ serialization / recovery for multiple training runs.</p>
 <hr />
 <p><span style="float:right;"><a href="https://github.com/titu1994/pyshac/blob/master/pyshac/config/data.py#L17">[source]</a></span></p>
 <h2 id="dataset"><a href="#dataset">Dataset</a><a class="headerlink" href="#dataset" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span><span class="n">pyshac</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">Dataset</span><span class="p">(</span><span class="n">parameter_list</span><span class="o">=</span><span class="bp">None</span><span class="p">)</span>
+<div class="codehilite"><pre><span></span><span class="n">pyshac</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">Dataset</span><span class="p">(</span><span class="n">parameter_list</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">basedir</span><span class="o">=</span><span class="s1">&#39;shac&#39;</span><span class="p">)</span>
 </pre></div>
 
 <p>Dataset manager for the engines.</p>
@@ -820,6 +832,8 @@ training.</p>
 <li><strong>parameter_list (hp.HyperParameterList | list | None):</strong> A python list
     of Hyper Parameters, or a HyperParameterList that has been built.
     Can also be None, if the parameters are to be assigned later.</li>
+<li><strong>basedir (str):</strong> The base directory where the data of the engine
+    will be stored.</li>
 </ul>
 <hr />
 <h2 id="dataset-methods">Dataset methods<a class="headerlink" href="#dataset-methods" title="Permanent link">&para;</a></h2>
@@ -916,14 +930,14 @@ or minimization of the objective value.</p>
 <p>HyperParameterList</p>
 <hr />
 <h3 id="load_from_directory">load_from_directory<a class="headerlink" href="#load_from_directory" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><span class="n">load_from_directory</span><span class="p">(</span><span class="nb">dir</span><span class="o">=</span><span class="s1">&#39;shac&#39;</span><span class="p">)</span>
+<div class="codehilite"><pre><span></span><span class="n">load_from_directory</span><span class="p">(</span><span class="n">basedir</span><span class="o">=</span><span class="s1">&#39;shac&#39;</span><span class="p">)</span>
 </pre></div>
 
 <p>Static method to load the dataset from a directory.</p>
 <p><strong>Arguments:</strong></p>
 <ul>
-<li><strong>dir</strong>: The base directory where 'shac' directory is. It will build the path
-    to the data and parameters itself.</li>
+<li><strong>basedir (str):</strong> The base directory where 'shac' directory is. It will
+    build the path to the data and parameters itself.</li>
 </ul>
 <p><strong>Raises:</strong></p>
 <ul>
