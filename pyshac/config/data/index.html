@@ -511,6 +511,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#flatten_parameters" title="flatten_parameters" class="md-nav__link">
+    flatten_parameters
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -785,6 +792,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#flatten_parameters" title="flatten_parameters" class="md-nav__link">
+    flatten_parameters
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -818,7 +832,7 @@ It provides a convenient interface to the <code>HyperParameterList</code> that i
 serialization / recovery for multiple training runs.</p>
 <h2 id="class-information">Class Information<a class="headerlink" href="#class-information" title="Permanent link">&para;</a></h2>
 <hr />
-<p><span style="float:right;"><a href="https://github.com/titu1994/pyshac/blob/master/pyshac/config/data.py#L17">[source]</a></span></p>
+<p><span style="float:right;"><a href="https://github.com/titu1994/pyshac/blob/master/pyshac/config/data.py#L40">[source]</a></span></p>
 <h2 id="dataset"><a href="#dataset">Dataset</a><a class="headerlink" href="#dataset" title="Permanent link">&para;</a></h2>
 <div class="codehilite"><pre><span></span><span class="n">pyshac</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">Dataset</span><span class="p">(</span><span class="n">parameter_list</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">basedir</span><span class="o">=</span><span class="s1">&#39;shac&#39;</span><span class="p">)</span>
 </pre></div>
@@ -1003,6 +1017,21 @@ provide by <code>data_path</code>. Also saves the parameters (list of hyper para
 <li><strong>parameters (hp.HyperParameterList | list):</strong> a Hyper Parameter List
     or a python list of Hyper Parameters.</li>
 </ul>
+<hr />
+<h3 id="flatten_parameters">flatten_parameters<a class="headerlink" href="#flatten_parameters" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><span class="n">flatten_parameters</span><span class="p">(</span><span class="n">params</span><span class="p">)</span>
+</pre></div>
+
+<p>Takes an OrderedDict or a list of lists, and flattens it into a
+list containing the items.</p>
+<p><strong>Arguments:</strong></p>
+<ul>
+<li><strong>params (OrderedDict | list of lists):</strong> The parameters that were
+    provided by the engine, either as an OrderedDict or a list
+    of list representation.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>a flattened python list containing just the sampled values.</p>
                 
                   
                 
