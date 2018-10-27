@@ -768,6 +768,18 @@ or pip install .[tests]  # to also include dependencies necessary for testing
 <li>UniformContinuousHyperParameter</li>
 <li>NormalContinuousHyperParameter</li>
 </ul>
+<p>There are also 3 additional hyper parameters, which are useful when a parameter needs to be sampled multiple times
+for each evaluation :</p>
+<ul>
+<li><a href="config/hyperparameters/#multidiscretehyperparameter">MultiDiscreteHyperParameter</a></li>
+<li><a href="config/hyperparameters/#multiuniformcontinuoushyperparameter">MultiUniformContinuousHyperParameter</a></li>
+<li><a href="config/hyperparameters/#multinormalcontinuoushyperparameter">MultiNormalContinuousHyperParameter</a></li>
+</ul>
+<p>These multi parameters have an additional argument <code>sample_count</code> which can be used to sample multiple times
+per step.</p>
+<p><strong>Note</strong>: The values will be concatenated linearly, so each multi parameter will have a list of values
+returned in the resultant OrderedDict. If you wish to flatten the entire search space, you can
+use <code>pyshac.flatten_parameters</code> on this OrderedDict.</p>
 <div class="codehilite"><pre><span></span><span class="kn">import</span> <span class="nn">pyshac</span>
 
 <span class="c1"># Discrete parameters</span>
