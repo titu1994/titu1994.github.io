@@ -329,6 +329,40 @@
     Examples
   </a>
   
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#evaluation-of-branin" title="Evaluation of Branin" class="md-nav__link">
+    Evaluation of Branin
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#evaluation-of-hardmann-6" title="Evaluation of Hardmann 6" class="md-nav__link">
+    Evaluation of Hardmann 6
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#evaluation-of-simple-optimization-objective" title="Evaluation of Simple Optimization Objective" class="md-nav__link">
+    Evaluation of Simple Optimization Objective
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#evaluation-of-hyper-parameter-optimization" title="Evaluation of Hyper Parameter Optimization" class="md-nav__link">
+    Evaluation of Hyper Parameter Optimization
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
       
@@ -674,6 +708,40 @@
     Examples
   </a>
   
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#evaluation-of-branin" title="Evaluation of Branin" class="md-nav__link">
+    Evaluation of Branin
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#evaluation-of-hardmann-6" title="Evaluation of Hardmann 6" class="md-nav__link">
+    Evaluation of Hardmann 6
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#evaluation-of-simple-optimization-objective" title="Evaluation of Simple Optimization Objective" class="md-nav__link">
+    Evaluation of Simple Optimization Objective
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#evaluation-of-hyper-parameter-optimization" title="Evaluation of Hyper Parameter Optimization" class="md-nav__link">
+    Evaluation of Hyper Parameter Optimization
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
       
@@ -771,9 +839,9 @@ or pip install .[tests]  # to also include dependencies necessary for testing
 <p>There are also 3 additional hyper parameters, which are useful when a parameter needs to be sampled multiple times
 for each evaluation :</p>
 <ul>
-<li><a href="config/hyperparameters/#multidiscretehyperparameter">MultiDiscreteHyperParameter</a></li>
-<li><a href="config/hyperparameters/#multiuniformcontinuoushyperparameter">MultiUniformContinuousHyperParameter</a></li>
-<li><a href="config/hyperparameters/#multinormalcontinuoushyperparameter">MultiNormalContinuousHyperParameter</a></li>
+<li>MultiDiscreteHyperParameter</li>
+<li>MultiUniformContinuousHyperParameter</li>
+<li>MultiNormalContinuousHyperParameter</li>
 </ul>
 <p>These multi parameters have an additional argument <code>sample_count</code> which can be used to sample multiple times
 per step.</p>
@@ -884,6 +952,19 @@ These parameters are :</p>
 <p>Examples based on the <code>Branin</code> and <code>Hartmann6</code> problems can be found in the <a href="https://github.com/titu1994/pyshac/tree/master/examples">Examples folder</a>.</p>
 <p>An example of how to use the <code>TensorflowSHAC</code> engine is provided <a href="https://github.com/titu1994/pyshac/tree/master/examples/tensorflow">in the example foldes as well</a>.</p>
 <p>Comparison scripts of basic optimization, <code>Branin</code> and <code>Hartmann6</code> using Tensorflow Eager 1.8 are provided in the respective folders.</p>
+<h3 id="evaluation-of-branin">Evaluation of Branin<a class="headerlink" href="#evaluation-of-branin" title="Permanent link">&para;</a></h3>
+<p>Brannin to close to the true optima as described in the paper.</p>
+<p><img src='https://github.com/titu1994/pyshac/blob/master/examples/branin/dataset.png?raw=true' height=100% width=50%></p>
+<h3 id="evaluation-of-hardmann-6">Evaluation of Hardmann 6<a class="headerlink" href="#evaluation-of-hardmann-6" title="Permanent link">&para;</a></h3>
+<p>Hartmann 6 was a much harder dataset, and results are worse than Random Search 2x and the one from the paper. Perhaps it was due to a bad run, and may be fixed with larger budget for training.</p>
+<p><img src='https://github.com/titu1994/pyshac/blob/master/examples/hartmann6/dataset.png?raw=true' height=100% width=50%></p>
+<h3 id="evaluation-of-simple-optimization-objective">Evaluation of Simple Optimization Objective<a class="headerlink" href="#evaluation-of-simple-optimization-objective" title="Permanent link">&para;</a></h3>
+<p>The task is to sample two parameters <code>x</code> and <code>y</code>, such that <code>z = 2 * x - y</code> and we want <code>z</code> to approach the value of 4. We utilize MSE 
+as the metric between z and the optimal value.</p>
+<p><img src='https://github.com/titu1994/pyshac/blob/master/examples/basic_opt/dataset.png?raw=true' height=100% width=50%></p>
+<h3 id="evaluation-of-hyper-parameter-optimization">Evaluation of Hyper Parameter Optimization<a class="headerlink" href="#evaluation-of-hyper-parameter-optimization" title="Permanent link">&para;</a></h3>
+<p>The task is to sample hyper parameters which provide high accuracy values using TensorflowSHAC engine.</p>
+<p><img src='https://github.com/titu1994/pyshac/blob/master/examples/tensorflow/dataset.png?raw=true' height=100% width=50%></p>
 <hr />
                 
                   

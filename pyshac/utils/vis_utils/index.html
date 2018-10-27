@@ -584,7 +584,7 @@
                   <h1>Visualization</h1>
                 
                 <h3 id="plot_dataset">plot_dataset<a class="headerlink" href="#plot_dataset" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><span class="n">plot_dataset</span><span class="p">(</span><span class="n">dataset</span><span class="p">,</span> <span class="n">to_file</span><span class="o">=</span><span class="s1">&#39;dataset.png&#39;</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Dataset evaluation&#39;</span><span class="p">,</span> <span class="n">eval_label</span><span class="o">=</span><span class="s1">&#39;Score&#39;</span><span class="p">)</span>
+<div class="codehilite"><pre><span></span><span class="n">plot_dataset</span><span class="p">(</span><span class="n">dataset</span><span class="p">,</span> <span class="n">to_file</span><span class="o">=</span><span class="s1">&#39;dataset.png&#39;</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Dataset evaluation&#39;</span><span class="p">,</span> <span class="n">eval_label</span><span class="o">=</span><span class="s1">&#39;Score&#39;</span><span class="p">,</span> <span class="n">trend_deg</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
 </pre></div>
 
 <p>Plots the training history of the provided dataset.
@@ -602,6 +602,8 @@ Can be provided either the <code>Dataset</code> object itself,</p>
     the plot.</li>
 <li><strong>eval_label (str):</strong> String label used as the y axis
     label of the plot.</li>
+<li><strong>trend_degree (int):</strong> Degree of the polynomial which
+    fits the dataset to create the trend line.</li>
 </ul>
 <p><strong>Raises:</strong></p>
 <ul>
