@@ -792,7 +792,7 @@ at significant cost of execution, as a new Tensorflow Graph and likewise, a new 
 </div>
 <h2 id="class-information">Class Information<a class="headerlink" href="#class-information" title="Permanent link">&para;</a></h2>
 <hr />
-<p><span style="float:right;"><a href="https://github.com/titu1994/pyshac/blob/master/pyshac/core/engine.py#L1065">[source]</a></span></p>
+<p><span style="float:right;"><a href="https://github.com/titu1994/pyshac/blob/master/pyshac/core/engine.py#L1072">[source]</a></span></p>
 <h2 id="shac"><a href="#shac">SHAC</a><a class="headerlink" href="#shac" title="Permanent link">&para;</a></h2>
 <div class="codehilite"><pre><span></span><span class="n">pyshac</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">engine</span><span class="o">.</span><span class="n">SHAC</span><span class="p">(</span><span class="n">hyperparameter_list</span><span class="p">,</span> <span class="n">total_budget</span><span class="p">,</span> <span class="n">num_batches</span><span class="p">,</span> <span class="n">objective</span><span class="o">=</span><span class="s1">&#39;max&#39;</span><span class="p">,</span> <span class="n">max_classifiers</span><span class="o">=</span><span class="mi">18</span><span class="p">,</span> <span class="n">save_dir</span><span class="o">=</span><span class="s1">&#39;shac&#39;</span><span class="p">)</span>
 </pre></div>
@@ -977,6 +977,8 @@ list.</p>
 <ul>
 <li><strong>ValueError</strong>: If <code>max_classifiers</code> is larger than the number of available
     classifiers.</li>
+<li><strong>RuntimeError</strong>: If <code>classifiers</code> are not available, either due to not being
+    trained or not being loaded into the engine.</li>
 </ul>
 <p><strong>Returns:</strong></p>
 <p>batches of samples in the form of an OrderedDict</p>

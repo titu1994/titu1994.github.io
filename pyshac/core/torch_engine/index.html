@@ -952,6 +952,8 @@ list.</p>
 <ul>
 <li><strong>ValueError</strong>: If <code>max_classifiers</code> is larger than the number of available
     classifiers.</li>
+<li><strong>RuntimeError</strong>: If <code>classifiers</code> are not available, either due to not being
+    trained or not being loaded into the engine.</li>
 </ul>
 <p><strong>Returns:</strong></p>
 <p>batches of samples in the form of an OrderedDict</p>
