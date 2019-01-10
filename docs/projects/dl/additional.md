@@ -2,6 +2,20 @@
 
 ----
 
+# [Dynamic Time Warping - Numba](https://github.com/titu1994/dtw-numba)
+
+Implementation of Dynamic Time Warping algorithm with speed improvements based on Numba.
+
+Supports for K nearest neighbours classifier using Dynamic Time Warping, based on the work presented by Mark Regan. The classes called KnnDTW are obtained from there, as a simplified interface akin to Scikit-Learn.
+
+The three variants available are in dtw.py, odtw.py and ucrdtw.py.
+
+ - dtw.py: Single threaded variant, support for visualizing the progress bar.
+ - odtw.py: Multi threaded variant, no support for visualization. In practice, much more effiecient.
+ - ucrdtw.py: Experimental (Do not use). Multi threaded variant, no support for visualization. It is based upon the optimized C implementation available at https://github.com/klon/ucrdtw.
+
+----
+
 # [Neural Algorithmic Logic Units](https://github.com/titu1994/keras-neural-alu)
 
 A Keras implementation of Neural Arithmatic and Logical Unit from the paper [Neural Algorithmic Logic Units](https://arxiv.org/abs/1808.00508)

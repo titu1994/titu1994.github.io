@@ -593,6 +593,16 @@
                 
                 <h1 id="various-projects">Various Projects<a class="headerlink" href="#various-projects" title="Permanent link">&para;</a></h1>
 <hr />
+<h1 id="dynamic-time-warping-numba"><a href="https://github.com/titu1994/dtw-numba">Dynamic Time Warping - Numba</a><a class="headerlink" href="#dynamic-time-warping-numba" title="Permanent link">&para;</a></h1>
+<p>Implementation of Dynamic Time Warping algorithm with speed improvements based on Numba.</p>
+<p>Supports for K nearest neighbours classifier using Dynamic Time Warping, based on the work presented by Mark Regan. The classes called KnnDTW are obtained from there, as a simplified interface akin to Scikit-Learn.</p>
+<p>The three variants available are in dtw.py, odtw.py and ucrdtw.py.</p>
+<ul>
+<li>dtw.py: Single threaded variant, support for visualizing the progress bar.</li>
+<li>odtw.py: Multi threaded variant, no support for visualization. In practice, much more effiecient.</li>
+<li>ucrdtw.py: Experimental (Do not use). Multi threaded variant, no support for visualization. It is based upon the optimized C implementation available at https://github.com/klon/ucrdtw.</li>
+</ul>
+<hr />
 <h1 id="neural-algorithmic-logic-units"><a href="https://github.com/titu1994/keras-neural-alu">Neural Algorithmic Logic Units</a><a class="headerlink" href="#neural-algorithmic-logic-units" title="Permanent link">&para;</a></h1>
 <p>A Keras implementation of Neural Arithmatic and Logical Unit from the paper <a href="https://arxiv.org/abs/1808.00508">Neural Algorithmic Logic Units</a>
 by Andrew Trask, Felix Hill, Scott Reed, Jack Rae, Chris Dyer, Phil Blunsom.</p>
@@ -762,8 +772,6 @@ by Andrew Trask, Felix Hill, Scott Reed, Jack Rae, Chris Dyer, Phil Blunsom.</p>
       
     
     
-      
-        <script>!function(e,a,t,n,o,c,i){e.GoogleAnalyticsObject=o,e.ga=e.ga||function(){(e.ga.q=e.ga.q||[]).push(arguments)},e.ga.l=1*new Date,c=a.createElement(t),i=a.getElementsByTagName(t)[0],c.async=1,c.src="https://www.google-analytics.com/analytics.js",i.parentNode.insertBefore(c,i)}(window,document,"script",0,"ga"),ga("create","UA-47921241-1","auto"),ga("set","anonymizeIp",!0),ga("send","pageview");var links=document.getElementsByTagName("a");if(Array.prototype.map.call(links,function(e){e.host!=document.location.host&&e.addEventListener("click",function(){var a=e.getAttribute("data-md-action")||"follow";ga("send","event","outbound",a,e.href)})}),document.forms.search){var query=document.forms.search.query;query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})}</script>
       
     
   </body>
