@@ -286,6 +286,21 @@
             "title": "Sequentual Halving and Classification"
         },
         {
+            "location": "/projects/dl/tensorflow/",
+            "text": "Tensorflow\n\u00b6\n\n\nProjects done in Tensorflow - either using Graph Execution or Eager Execution.\n\n\n\n\nTensorflow ODE Solver\n\u00b6\n\n\nA library built to replicate the \nTorchDiffEq\n library built for the \nNeural Ordinary Differential Equations paper by Chen et al\n, running entirely on Tensorflow Eager Execution.\n\n\nAll credits for the codebase go to \n@rtqichen\n for providing an excellent base to reimplement from.\n\n\nSimilar to the PyTorch codebase, this library provides ordinary differential equation (ODE) solvers implemented in Tensorflow Eager. For usage of ODE solvers in deep learning applications, see \nNeural Ordinary Differential Equations paper\n.\n\n\nAs the solvers are implemented in Tensorflow, algorithms in this repository are fully supported to run on the GPU.",
+            "title": "Tensorflow"
+        },
+        {
+            "location": "/projects/dl/tensorflow/#tensorflow",
+            "text": "Projects done in Tensorflow - either using Graph Execution or Eager Execution.",
+            "title": "Tensorflow"
+        },
+        {
+            "location": "/projects/dl/tensorflow/#tensorflow-ode-solver",
+            "text": "A library built to replicate the  TorchDiffEq  library built for the  Neural Ordinary Differential Equations paper by Chen et al , running entirely on Tensorflow Eager Execution.  All credits for the codebase go to  @rtqichen  for providing an excellent base to reimplement from.  Similar to the PyTorch codebase, this library provides ordinary differential equation (ODE) solvers implemented in Tensorflow Eager. For usage of ODE solvers in deep learning applications, see  Neural Ordinary Differential Equations paper .  As the solvers are implemented in Tensorflow, algorithms in this repository are fully supported to run on the GPU.",
+            "title": "Tensorflow ODE Solver"
+        },
+        {
             "location": "/projects/dl/contrib/",
             "text": "Contributions to Keras and Keras Contrib\n\u00b6\n\n\n\n\nKeras Applications\n\u00b6\n\n\nVarious state of the art models listed below were merged with Keras or Keras contrib as below :\n\n\n\n\nNASNet \n(Keras)\n\n\nMobilNet V1 \n(Keras)\n\n\nNASNet \n(Keras-Contrib)\n\n\nDenseNet \n(Keras-Contrib)\n\n\nWide ResNet \n(Keras-Contrib)\n\n\nResidual of Residual Networks \n(Keras-Contrib)\n\n\n\n\n\n\nContrib Callbacks\n\u00b6\n\n\nAdded the Snapshot Ensemble callback manager for Contrib.\n\n\n\n\nContrib Layers\n\u00b6\n\n\nAdded a few layers to Keras Contrib :\n\n\n\n\nSubPixelUpscaling\n\n\nBatchRenormalization\n\n\nGroupNormalization",
             "title": "Keras Contrib"

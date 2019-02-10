@@ -55,6 +55,7 @@ pages:
     - Image Classifiers: projects/dl/image-classifiers.md
     - Time Series Classification: projects/dl/time-series-classification.md
     - Neural Architecture Search: projects/dl/nas.md
+    - Tensorflow: projects/dl/tensorflow.md
     - Keras Contrib: projects/dl/contrib.md
     - Additional Work: projects/dl/additional.md
   - Android: projects/android.md
