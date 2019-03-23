@@ -538,6 +538,20 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#set_seed" title="set_seed" class="md-nav__link">
+    set_seed
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#as_deterministic" title="as_deterministic" class="md-nav__link">
+    as_deterministic
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -743,6 +757,20 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#set_seed" title="set_seed" class="md-nav__link">
+    set_seed
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#as_deterministic" title="as_deterministic" class="md-nav__link">
+    as_deterministic
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -792,7 +820,7 @@ at significant cost of execution, as a new Tensorflow Graph and likewise, a new 
 </div>
 <h2 id="class-information">Class Information<a class="headerlink" href="#class-information" title="Permanent link">&para;</a></h2>
 <hr />
-<p><span style="float:right;"><a href="https://github.com/titu1994/pyshac/blob/master/pyshac/core/engine.py#L1072">[source]</a></span></p>
+<p><span style="float:right;"><a href="https://github.com/titu1994/pyshac/blob/master/pyshac/core/engine.py#L1101">[source]</a></span></p>
 <h2 id="shac"><a href="#shac">SHAC</a><a class="headerlink" href="#shac" title="Permanent link">&para;</a></h2>
 <div class="codehilite"><pre><span></span><span class="n">pyshac</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">engine</span><span class="o">.</span><span class="n">SHAC</span><span class="p">(</span><span class="n">hyperparameter_list</span><span class="p">,</span> <span class="n">total_budget</span><span class="p">,</span> <span class="n">num_batches</span><span class="p">,</span> <span class="n">objective</span><span class="o">=</span><span class="s1">&#39;max&#39;</span><span class="p">,</span> <span class="n">max_classifiers</span><span class="o">=</span><span class="mi">18</span><span class="p">,</span> <span class="n">save_dir</span><span class="o">=</span><span class="s1">&#39;shac&#39;</span><span class="p">)</span>
 </pre></div>
@@ -1035,6 +1063,27 @@ and sets the max parallel generators to be the number of cores.</p>
 be locked by Python's GIL.</p>
 <p>While technically still "parallel", it is in fact concurrent execution
 rather than parallel execution of the evaluators.</p>
+<hr />
+<h3 id="set_seed">set_seed<a class="headerlink" href="#set_seed" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><span class="n">set_seed</span><span class="p">(</span><span class="n">seed</span><span class="p">)</span>
+</pre></div>
+
+<p>Sets the seed of the parameters and the engine.</p>
+<p><strong>Arguments:</strong></p>
+<ul>
+<li><strong>seed (int | None):</strong> Seed value of the random state.</li>
+</ul>
+<hr />
+<h3 id="as_deterministic">as_deterministic<a class="headerlink" href="#as_deterministic" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><span class="n">as_deterministic</span><span class="p">()</span>
+</pre></div>
+
+<p>Context manager that sets the seed of the parameters
+and the engine only inside the context block.</p>
+<p><strong>Arguments:</strong></p>
+<ul>
+<li><strong>seed (int | None):</strong> Seed value of the random state.</li>
+</ul>
                 
                   
                 

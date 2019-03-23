@@ -555,6 +555,20 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#set_seed" title="set_seed" class="md-nav__link">
+    set_seed
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#as_deterministic" title="as_deterministic" class="md-nav__link">
+    as_deterministic
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -725,6 +739,20 @@
           <li class="md-nav__item">
   <a href="#concurrent_evaluators" title="concurrent_evaluators" class="md-nav__link">
     concurrent_evaluators
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set_seed" title="set_seed" class="md-nav__link">
+    set_seed
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#as_deterministic" title="as_deterministic" class="md-nav__link">
+    as_deterministic
   </a>
   
 </li>
@@ -1021,6 +1049,27 @@ and sets the max parallel generators to be the number of cores.</p>
 be locked by Python's GIL.</p>
 <p>While technically still "parallel", it is in fact concurrent execution
 rather than parallel execution of the evaluators.</p>
+<hr />
+<h3 id="set_seed">set_seed<a class="headerlink" href="#set_seed" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><span class="n">set_seed</span><span class="p">(</span><span class="n">seed</span><span class="p">)</span>
+</pre></div>
+
+<p>Sets the seed of the parameters and the engine.</p>
+<p><strong>Arguments:</strong></p>
+<ul>
+<li><strong>seed (int | None):</strong> Seed value of the random state.</li>
+</ul>
+<hr />
+<h3 id="as_deterministic">as_deterministic<a class="headerlink" href="#as_deterministic" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><span class="n">as_deterministic</span><span class="p">()</span>
+</pre></div>
+
+<p>Context manager that sets the seed of the parameters
+and the engine only inside the context block.</p>
+<p><strong>Arguments:</strong></p>
+<ul>
+<li><strong>seed (int | None):</strong> Seed value of the random state.</li>
+</ul>
                 
                   
                 
