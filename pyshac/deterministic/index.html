@@ -38,7 +38,7 @@
     
     
       
-        <title>Callbacks - PySHAC Documentation</title>
+        <title>Deterministic Engines - PySHAC Documentation</title>
       
     
     
@@ -100,7 +100,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#callbacks" tabindex="1" class="md-skip">
+      <a href="#deterministic-engines" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -126,7 +126,7 @@
                 PySHAC Documentation
               </span>
               <span class="md-header-nav__topic">
-                Callbacks
+                Deterministic Engines
               </span>
             
           
@@ -301,11 +301,83 @@
       
       
 
+  
 
-  <li class="md-nav__item">
-    <a href="../deterministic/" title="Deterministic Engines" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Deterministic Engines
+      </label>
+    
+    <a href="./" title="Deterministic Engines" class="md-nav__link md-nav__link--active">
       Deterministic Engines
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#deterministic-behaviour-for-the-engine" title="Deterministic Behaviour for the Engine" class="md-nav__link">
+    Deterministic Behaviour for the Engine
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#setting-global-deterministic-behaviour" title="Setting Global Deterministic Behaviour" class="md-nav__link">
+    Setting Global Deterministic Behaviour
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setting-local-deterministic-behaviour" title="Setting Local Deterministic Behaviour" class="md-nav__link">
+    Setting Local Deterministic Behaviour
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#restoring-engines-with-deterministic-behaviour" title="Restoring Engines with Deterministic Behaviour" class="md-nav__link">
+    Restoring Engines with Deterministic Behaviour
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#note" title="NOTE:" class="md-nav__link">
+    NOTE:
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
     
@@ -337,56 +409,11 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        Callbacks
-      </label>
-    
-    <a href="./" title="Callbacks" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../callbacks/" title="Callbacks" class="md-nav__link">
       Callbacks
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#usage" title="Usage" class="md-nav__link">
-    Usage
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#history" title="History" class="md-nav__link">
-    History
-  </a>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
     
@@ -579,15 +606,42 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#usage" title="Usage" class="md-nav__link">
-    Usage
+  <a href="#deterministic-behaviour-for-the-engine" title="Deterministic Behaviour for the Engine" class="md-nav__link">
+    Deterministic Behaviour for the Engine
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#setting-global-deterministic-behaviour" title="Setting Global Deterministic Behaviour" class="md-nav__link">
+    Setting Global Deterministic Behaviour
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setting-local-deterministic-behaviour" title="Setting Local Deterministic Behaviour" class="md-nav__link">
+    Setting Local Deterministic Behaviour
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#restoring-engines-with-deterministic-behaviour" title="Restoring Engines with Deterministic Behaviour" class="md-nav__link">
+    Restoring Engines with Deterministic Behaviour
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#history" title="History" class="md-nav__link">
-    History
+  <a href="#note" title="NOTE:" class="md-nav__link">
+    NOTE:
   </a>
   
 </li>
@@ -608,41 +662,79 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/titu1994/pyshac/edit/master/docs/callbacks.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                  <a href="https://github.com/titu1994/pyshac/edit/master/docs/deterministic.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1 id="callbacks">Callbacks<a class="headerlink" href="#callbacks" title="Permanent link">&para;</a></h1>
+                <h1 id="deterministic-engines">Deterministic Engines<a class="headerlink" href="#deterministic-engines" title="Permanent link">&para;</a></h1>
 <hr />
-<p>Callbacks can be used with PySHAC for custom code execution, such as monitoring the improvement of the engine,
-maintaining a history of the training session or simply writing the logs to files.</p>
-<p>Callbacks allow you the flexibility to prepare your state prior to training or evaluation, and in doing so can
-allow one to perform stateful evaluation if necessary using concurrent evaluators.</p>
-<h2 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h2>
-<p>Callbacks can be imported from the <code>pyshac.config.callbacks</code> package as shown below.</p>
-<div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">pyshac.config.callbacks</span> <span class="kn">import</span> <span class="n">History</span><span class="p">,</span> <span class="n">CSVLogger</span>
+<p><code>PySHAC</code>, on its own, uses no random seed to enable deterministic training or evaluation.
+However, there are often the cases where experiments must be controlled, and it makes sense
+to set the random seed for deterministic behaviour.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>PySHAC ignores the global numpy random seed. Therefore setting <code>np.random.seed(...)</code>
+or <code>np.random.RandomState(...)</code> will <strong>not</strong> make the PySHAC engine or its components
+deterministic.</p>
+</div>
+<h2 id="deterministic-behaviour-for-the-engine">Deterministic Behaviour for the Engine<a class="headerlink" href="#deterministic-behaviour-for-the-engine" title="Permanent link">&para;</a></h2>
+<hr />
+<p>Deterministic behaviour can be set in the engine either globally (all operations on the engine are
+deterministic) or locally (engine is deterministic only inside the context block).</p>
+<h3 id="setting-global-deterministic-behaviour">Setting Global Deterministic Behaviour<a class="headerlink" href="#setting-global-deterministic-behaviour" title="Permanent link">&para;</a></h3>
+<p>Given we have initialized an engine as below (we use the basic <code>SHAC</code> engine here, but any engine
+subclass can use the same API), we enable global deterministic behaviour as follows :</p>
+<div class="codehilite"><pre><span></span><span class="kn">import</span> <span class="nn">pyshac</span>
 
-<span class="n">shac</span> <span class="o">=</span> <span class="n">SHAC</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
+<span class="n">shac</span> <span class="o">=</span> <span class="n">pyshac</span><span class="o">.</span><span class="n">SHAC</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
 
-<span class="c1"># History is not needed here, as it is automatically added by default for all .fit / .fit_dataset calls.</span>
-<span class="n">callbacks</span> <span class="o">=</span> <span class="p">[</span><span class="n">History</span><span class="p">(),</span> <span class="n">CSVLogger</span><span class="p">(</span><span class="s1">&#39;path/to/file.csv&#39;</span><span class="p">)]</span>
-
-<span class="n">history</span> <span class="o">=</span> <span class="n">shac</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">evaluation_function</span><span class="p">,</span> <span class="n">callbacks</span><span class="o">=</span><span class="n">callbacks</span><span class="p">)</span>
-<span class="n">OR</span>
-<span class="n">history</span> <span class="o">=</span> <span class="n">shac</span><span class="o">.</span><span class="n">fit_dataset</span><span class="p">(</span><span class="s1">&#39;path/to/dataset&#39;</span><span class="p">,</span> <span class="n">callbacks</span><span class="o">=</span><span class="n">callbacks</span><span class="p">)</span>
-
-<span class="k">print</span><span class="p">(</span><span class="n">history</span><span class="o">.</span><span class="n">history</span><span class="p">)</span>
+<span class="c1"># make engine deterministic</span>
+<span class="n">shac</span><span class="o">.</span><span class="n">set_seed</span><span class="p">(</span><span class="n">seed</span><span class="p">)</span>  <span class="c1"># an integer seed</span>
 </pre></div>
 
-<h2 id="history">History<a class="headerlink" href="#history" title="Permanent link">&para;</a></h2>
-<p>All calls to <code>shac.fit</code> and <code>shac.fit_dataset</code> will now return a <code>History</code> object, which is a callback to
-monitor and log all valuable information occurring during training.</p>
-<p>The <code>History</code> object has a special member, also called <code>history</code>, which is a dictionary containing all of
-the logged values.</p>
-<div class="admonition info">
-<p class="admonition-title">History is added by default</p>
-<p>The <code>History</code> callback is added by default to all calls to <code>fit</code> or <code>fit_dataset</code> and therefore
-there it is not necessary to add this callback manually.</p>
-</div>
+<p>Once the seed has been set as such, all operations of the engine are deterministic globally until
+either the engine is destroyed or we re-enable non-determinism in the engine as follows :</p>
+<div class="codehilite"><pre><span></span><span class="n">shac</span><span class="o">.</span><span class="n">set_seed</span><span class="p">(</span><span class="bp">None</span><span class="p">)</span>  <span class="c1"># use `None` to make the engine non deterministic again.</span>
+</pre></div>
+
+<h3 id="setting-local-deterministic-behaviour">Setting Local Deterministic Behaviour<a class="headerlink" href="#setting-local-deterministic-behaviour" title="Permanent link">&para;</a></h3>
+<hr />
+<p>Given we have initialized an engine as below (we use the basic <code>SHAC</code> engine here, but any engine
+subclass can use the same API), we enable local deterministic behaviour using a context manager as
+follows :</p>
+<div class="codehilite"><pre><span></span><span class="kn">import</span> <span class="nn">pyshac</span>
+
+<span class="n">shac</span> <span class="o">=</span> <span class="n">pyshac</span><span class="o">.</span><span class="n">SHAC</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
+
+<span class="k">with</span> <span class="n">shac</span><span class="o">.</span><span class="n">as_deterministic</span><span class="p">(</span><span class="n">seed</span><span class="p">):</span>  <span class="c1"># deterministic only within this block</span>
+    <span class="o">...</span>
+</pre></div>
+
+<h2 id="restoring-engines-with-deterministic-behaviour">Restoring Engines with Deterministic Behaviour<a class="headerlink" href="#restoring-engines-with-deterministic-behaviour" title="Permanent link">&para;</a></h2>
+<hr />
+<p>Engines can be saved and then restored as required by the engine, but by default, even restored engines
+are non-deterministic. Deterministic behaviour must be reestablished, but in the proper order.</p>
+<div class="codehilite"><pre><span></span><span class="c1"># First create a default engine without any hyper parameters.</span>
+<span class="n">new_shac</span> <span class="o">=</span> <span class="n">pyshac</span><span class="o">.</span><span class="n">SHAC</span><span class="p">(</span><span class="bp">None</span><span class="p">,</span> <span class="n">total_budget</span><span class="p">,</span> <span class="n">batch_size</span><span class="o">=</span><span class="n">batch_size</span><span class="p">,</span> <span class="n">objective</span><span class="o">=</span><span class="n">objective</span><span class="p">)</span>
+
+<span class="c1"># Restore the engine</span>
+<span class="n">new_shac</span><span class="o">.</span><span class="n">restore_data</span><span class="p">()</span>
+
+<span class="c1"># Restore deterministic behaviour now.</span>
+<span class="n">new_shac</span><span class="o">.</span><span class="n">set_seed</span><span class="p">(</span><span class="n">seed</span><span class="p">)</span>
+</pre></div>
+
+<h2 id="note"><strong>NOTE</strong>:<a class="headerlink" href="#note" title="Permanent link">&para;</a></h2>
+<p>If the user attempts to set the seed before the engine has been restored, then the engine will issue
+a warning stating that the engine had no hyper parameters which it could seed.</p>
+<h1 id="deterministic-managed-engines">Deterministic Managed Engines<a class="headerlink" href="#deterministic-managed-engines" title="Permanent link">&para;</a></h1>
+<hr />
+<p>The managed engines which subclass <code>SHAC</code> also have full support for deterministic behaviour.</p>
+<p>This entails :</p>
+<ul>
+<li><code>TensorflowSHAC</code>: Seeds the engine randomness as well as uses <code>tf.set_random_seed(seed)</code> to make the engine deterministic.</li>
+<li><code>KerasSHAC</code>: Seeds the engine randomness as well as the Tensorflow seed when using the Tensorflow backend.</li>
+<li><code>TorchSHAC</code>: Seeds the engine randomness as well as uses <code>np.random.seed()</code>, <code>torch.manual_seed()</code> and <code>torch.cuda.manual_seed_all()</code>.</li>
+</ul>
                 
                   
                 
@@ -663,7 +755,7 @@ there it is not necessary to add this callback manually.</p>
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../external-dataset-training/" title="External Dataset Training" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../managed/" title="Managed Engines" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -672,19 +764,19 @@ there it is not necessary to add this callback manually.</p>
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                External Dataset Training
+                Managed Engines
               </span>
             </div>
           </a>
         
         
-          <a href="../config/hyperparameters/" title="Hyper Parameters" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../custom-hyper-parameters/" title="Custom Hyper Parameters" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Hyper Parameters
+                Custom Hyper Parameters
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
