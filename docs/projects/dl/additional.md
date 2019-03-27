@@ -2,6 +2,15 @@
 
 ----
 
+# [Keras AdaBound Optimizer](https://github.com/titu1994/keras-adabound)
+
+Keras port of AdaBound Optimizer for PyTorch, from the paper
+[Adaptive Gradient Methods with Dynamic Bound of Learning Rate](https://openreview.net/forum?id=Bkg3g2R9FX).
+
+Provides weights for ResNet 34 model trained on CIFAR 10 reaching 92% without random cropping augmentation.
+
+----
+
 # [Dynamic Time Warping - Numba](https://github.com/titu1994/dtw-numba)
 
 Implementation of Dynamic Time Warping algorithm with speed improvements based on Numba.

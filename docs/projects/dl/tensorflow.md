@@ -16,6 +16,11 @@ As the solvers are implemented in Tensorflow, algorithms in this repository are 
 
 ----
 
+# [PySHAC - Sequential Halving and Classification](https://github.com/titu1994/pyshac)
 
+PySHAC is a python library to use the Sequential Halving and Classification algorithm from the paper
+[Parallel Architecture and Hyperparameter Search via Successive Halving and Classification](https://arxiv.org/abs/1805.10255)
+with ease.
 
+----
 
