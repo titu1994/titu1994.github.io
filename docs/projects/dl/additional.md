@@ -2,6 +2,14 @@
 
 ----
 
+# [Keras LAMB Optimizer](https://github.com/titu1994/keras-LAMB-Optimizer)
+
+Implementation of the LAMB optimizer from the paper [Reducing BERT Pre-Training Time from 3 Days to 76 Minutes](https://arxiv.org/abs/1904.00962).
+
+Supports huge batch size training while only requiring learning rate to be changed.
+
+----
+
 # [Keras AdaBound Optimizer](https://github.com/titu1994/keras-adabound)
 
 Keras port of AdaBound Optimizer for PyTorch, from the paper
