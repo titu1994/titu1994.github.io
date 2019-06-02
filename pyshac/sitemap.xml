@@ -2,87 +2,87 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
      <loc>/</loc>
-     <lastmod>2019-03-22</lastmod>
+     <lastmod>2019-06-02</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>/install/</loc>
-     <lastmod>2019-03-22</lastmod>
+     <lastmod>2019-06-02</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>/guide/</loc>
-     <lastmod>2019-03-22</lastmod>
+     <lastmod>2019-06-02</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>/serial-execution/</loc>
-     <lastmod>2019-03-22</lastmod>
+     <lastmod>2019-06-02</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>/managed/</loc>
-     <lastmod>2019-03-22</lastmod>
+     <lastmod>2019-06-02</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>/deterministic/</loc>
-     <lastmod>2019-03-22</lastmod>
+     <lastmod>2019-06-02</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>/custom-hyper-parameters/</loc>
-     <lastmod>2019-03-22</lastmod>
+     <lastmod>2019-06-02</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>/external-dataset-training/</loc>
-     <lastmod>2019-03-22</lastmod>
+     <lastmod>2019-06-02</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>/callbacks/</loc>
-     <lastmod>2019-03-22</lastmod>
+     <lastmod>2019-06-02</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>/config/hyperparameters/</loc>
-     <lastmod>2019-03-22</lastmod>
+     <lastmod>2019-06-02</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>/config/data/</loc>
-     <lastmod>2019-03-22</lastmod>
+     <lastmod>2019-06-02</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>/config/callbacks/</loc>
-     <lastmod>2019-03-22</lastmod>
+     <lastmod>2019-06-02</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>/core/engine/</loc>
-     <lastmod>2019-03-22</lastmod>
+     <lastmod>2019-06-02</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>/core/torch_engine/</loc>
-     <lastmod>2019-03-22</lastmod>
+     <lastmod>2019-06-02</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>/core/tf_engine/</loc>
-     <lastmod>2019-03-22</lastmod>
+     <lastmod>2019-06-02</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>/core/keras_engine/</loc>
-     <lastmod>2019-03-22</lastmod>
+     <lastmod>2019-06-02</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>/utils/vis_utils/</loc>
-     <lastmod>2019-03-22</lastmod>
+     <lastmod>2019-06-02</lastmod>
      <changefreq>daily</changefreq>
     </url>
 </urlset>

@@ -5,6 +5,16 @@ All of these models are built in Keras or Tensorflow.
 
 ----
 
+## [Octave Convolutions](https://github.com/titu1994/keras-octconv)
+
+Keras implementation of the Octave Convolution blocks from the paper
+[Drop an Octave: Reducing Spatial Redundancy in Convolutional Neural Networks with Octave Convolution](https://arxiv.org/abs/1904.05049).
+
+Provides code blocks for initializing the Oct-Conv architecture, building Oct-Conv blocks and
+closing the Oct-conv architecture, as well as Octave-Resnet models.
+
+----
+
 ## [Non-Local Neural Networks](https://github.com/titu1994/keras-non-local-nets)
 
 Keras implementation of Non-local blocks from the paper [Non-local Neural Networks](https://arxiv.org/abs/1711.07971).
