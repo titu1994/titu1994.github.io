@@ -4,9 +4,9 @@ theme:
   palette:
     primary: 'white'
     accent: 'light blue'
-  feature:
-    - tabs
-    - instant
+  features:
+    - navigation.tabs
+    - navigation.instant
   icon:
     logo: material/github
     repo: material/github
