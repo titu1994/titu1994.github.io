@@ -52,15 +52,22 @@ nav:
   - Academia: academia.md
   - Contact: contact.md
 - Research:
-  - Published: research/published.md
-  - Preprints: research/preprints.md
+  - Automatic Speech Recognition: research/speech/asr.md
+  - Speech Classification: research/speech/speech_classification.md
+  - Time Series Classification: research/time_series_classification/tsc.md
+  - Medical Image Segmentation: research/medical_image_segmentation/diabetic_retinopathy.md
+  - Additional Publications: research/misc/misc.md
 - Projects:
-  - Deep Learning:
+  - Automatic Speech Recognition:
+    - ASR Libraries: projects/dl/automatic-speech-recognition.md
+  - Time Series:
+    - Time Series Classification: projects/dl/time-series-classification.md
+  - Computer Vision:
     - Neural Style Transfer: projects/dl/style-transfer.md
     - Image Super-Resolution : projects/dl/super-resolution.md
     - Image Classifiers: projects/dl/image-classifiers.md
-    - Time Series Classification: projects/dl/time-series-classification.md
     - Neural Architecture Search: projects/dl/nas.md
+  - Deep Learning Libraries:
     - Tensorflow: projects/dl/tensorflow.md
     - Keras Contrib: projects/dl/contrib.md
     - Additional Work: projects/dl/additional.md
