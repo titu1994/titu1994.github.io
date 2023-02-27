@@ -13,6 +13,22 @@
 
 ----
 
+## [Multi-blank Transducers for Speech Recognition](https://arxiv.org/abs/2211.03541)
+
+!!!abstract
+    This paper proposes a modification to RNN-Transducer (RNN-T) models for automatic speech recognition (ASR). 
+    In standard RNN-T, the emission of a blank symbol consumes exactly one input frame; in our proposed method, 
+    we introduce additional blank symbols, which consume two or more input frames when emitted. We refer to the 
+    added symbols as big blanks, and the method multi-blank RNN-T. For training multi-blank RNN-Ts, we propose a 
+    novel logit under-normalization method in order to prioritize emissions of big blanks. With experiments on 
+    multiple languages and datasets, we show that multi-blank RNN-T methods could bring relative speedups of 
+    over +90%/+139% to model inference for English Librispeech and German Multilingual Librispeech datasets, 
+    respectively. The multi-blank RNN-T method also improves ASR accuracy consistently. We will release our 
+    implementation of the method in the NeMo (\url{https://github.com/NVIDIA/NeMo}) toolkit.
+
+
+----
+
 ## [SPGISpeech: 5,000 Hours of Transcribed Financial Audio for Fully Formatted End-to-End Speech Recognition](https://www.isca-speech.org/archive/interspeech_2021/oneill21_interspeech.html)
 
 !!!abstract
@@ -24,6 +40,21 @@
     labels. We present baseline Conformer-based models trained
     on a corpus of 5,000 hours of professionally transcribed earnings calls, achieving a CER of 1.7. As a contribution to the
     STT research community, we release the corpus free for noncommercial use.1
+
+
+----
+
+## [Damage Control During Domain Adaptation for Transducer Based Automatic Speech Recognition](https://ieeexplore.ieee.org/abstract/document/10023219)
+
+!!!abstract
+    Automatic speech recognition models are often adapted to improve their accuracy in a new domain. A potential 
+    drawback of model adaptation to new domains is catastrophic forgetting, where the Word Error Rate on the 
+    original domain is significantly degraded. This paper addresses the situation when we want to simultaneously 
+    adapt automatic speech recognition models to a new domain and limit the degradation of accuracy on the original 
+    domain without access to the original training dataset. We propose several techniques such as a limited 
+    training strategy and regularized adapter modules for the Transducer encoder, prediction, and joiner network. 
+    We apply these methods to the Google Speech Commands and to the UK and Ireland English Dialect speech data set 
+    and obtain strong results on the new target domain while limiting the degradation on the original domain.
 
 ----
 
@@ -68,5 +99,19 @@
     both maintain the performance on clean speech, and improve the model accuracy in noisy conditions. With 
     this schema, we trained robust to noise English and Mandarin ASR models on large public corpora. All 
     described models and training recipes are open sourced in NeMo, a toolkit for conversational AI.
+
+----
+
+## [NVIDIA NeMo Offline Speech Translation Systems for IWSLT 2022](https://aclanthology.org/2022.iwslt-1.18/)
+
+!!!abstract
+    This paper provides an overview of NVIDIA NeMo’s speech translation systems for the IWSLT 2022 Offline Speech 
+    Translation Task. Our cascade system consists of 1) Conformer RNN-T automatic speech recognition model, 2) 
+    punctuation-capitalization model based on pre-trained T5 encoder, 3) ensemble of Transformer neural machine 
+    translation models fine-tuned on TED talks. Our end-to-end model has less parameters and consists of Conformer 
+    encoder and Transformer decoder. It relies on the cascade system by re-using its pre-trained ASR encoder and 
+    training on synthetic translations generated with the ensemble of NMT models. Our En->De cascade and end-to-end 
+    systems achieve 29.7 and 26.2 BLEU on the 2020 test set correspondingly, both outperforming the previous year’s 
+    best of 26 BLEU.
 
 ----
