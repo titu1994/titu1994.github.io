@@ -6,7 +6,8 @@ theme:
     accent: 'light blue'
   features:
     - navigation.tabs
-    - navigation.instant
+    - navigation.tracking
+    - navigation.footer
   icon:
     logo: material/github
     repo: material/github
@@ -24,6 +25,7 @@ extra:
       link: 'https://twitter.com/HaseoX94/'
     - icon: 'fontawesome/brands/linkedin'
       link: 'https://www.linkedin.com/in/somshubramajumdar/'
+
 
 plugins:
   - search:
